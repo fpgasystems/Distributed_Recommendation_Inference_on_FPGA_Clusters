@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Mar 10 09:20:52 2021
+# Process ID: 79055
+# Current directory: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_1_2
+# Command line: vivado ./build_dir.hw.xilinx_u280_xdma_201920_3/link/vivado/vpl/prj/prj.xpr
+# Log file: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_1_2/vivado.log
+# Journal file: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_1_2/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project ./build_dir.hw.xilinx_u280_xdma_201920_3/link/vivado/vpl/prj/prj.xpr
+open_run impl_1
+report_utilization -name utilization_1

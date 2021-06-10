@@ -1,0 +1,91 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Mar 10 09:20:52 2021
+# Process ID: 79055
+# Current directory: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_1_2
+# Command line: vivado ./build_dir.hw.xilinx_u280_xdma_201920_3/link/vivado/vpl/prj/prj.xpr
+# Log file: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_1_2/vivado.log
+# Journal file: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_1_2/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project ./build_dir.hw.xilinx_u280_xdma_201920_3/link/vivado/vpl/prj/prj.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_1_2/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/xo/ip_repo/ethz_ch_kernel_cmac_krnl_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_1_2/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/xo/ip_repo/xilinx_com_hls_hls_bil_krnl_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_1_2/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/xo/ip_repo/ethz_ch_kernel_network_krnl_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_1_2/build_dir.hw.xilinx_u280_xdma_201920_3/link/vivado/vpl/.local/hw_platform/iprepo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/Vitis/2019.2/data/cache/xilinx'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_1_2/build_dir.hw.xilinx_u280_xdma_201920_3/link/vivado/vpl/.local/hw_platform/ipcache'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/Vitis/2019.2/data/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_1_2/build/fpga-network-stack/iprepo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.2/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:Monitor_AXI_Master:1.0'. The one found in IP location '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_1_2/build_dir.hw.xilinx_u280_xdma_201920_3/link/vivado/vpl/.local/hw_platform/iprepo/iprepo/monitor_axi_master_v1_0' will take precedence over the same IP in location /opt/Xilinx/Vitis/2019.2/data/ip/xilinx/monitor_axi_master_v1_0
+WARNING: [IP_Flow 19-4830] Duplicate Interface found for 'xilinx.com:interface:sdsoc_trace:2.0'. The one found in location '/opt/Xilinx/Vitis/2019.2/data/ip/xilinx/sdsoc_trace_v2_0/sdsoc_trace_v2_0.xml' will take precedence over the same Interface in location '/opt/Xilinx/Vivado/2019.2/data/ip/interfaces/sdsoc_trace_v2_0/sdsoc_trace_v2_0.xml'
+CRITICAL WARNING: [Common 17-1649] The Vivado message database '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_1_2/build_dir.hw.xilinx_u280_xdma_201920_3/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hls_bil_krnl_1_0_synth_1/vivado.pb' contains 133114 messages. Restoring all messages from this message database will impact Vivado performance, so only WARNING, CRITICAL WARNING, and ERROR messages will be restored. To restore all messages from this file use the tcl command 'set_param messaging.loadPbLimit 133115' and re-open the project.
+CRITICAL WARNING: [Common 17-1649] The Vivado message database '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_1_2/build_dir.hw.xilinx_u280_xdma_201920_3/link/vivado/vpl/prj/prj.runs/pfm_dynamic_network_krnl_1_0_synth_1/vivado.pb' contains 32347 messages. Restoring all messages from this message database will impact Vivado performance, so only WARNING, CRITICAL WARNING, and ERROR messages will be restored. To restore all messages from this file use the tcl command 'set_param messaging.loadPbLimit 32348' and re-open the project.
+CRITICAL WARNING: [Common 17-1649] The Vivado message database '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_1_2/build_dir.hw.xilinx_u280_xdma_201920_3/link/vivado/vpl/prj/prj.runs/impl_1/place_design.pb' contains 48260 messages. Restoring all messages from this message database will impact Vivado performance, so only WARNING, CRITICAL WARNING, and ERROR messages will be restored. To restore all messages from this file use the tcl command 'set_param messaging.loadPbLimit 48261' and re-open the project.
+open_project: Time (s): cpu = 00:01:18 ; elapsed = 00:01:43 . Memory (MB): peak = 7527.336 ; gain = 783.652 ; free physical = 313658 ; free virtual = 433439
+open_run impl_1
+INFO: [Device 21-403] Loading part xcu280-fsvh2892-2L-e
+Netlist sorting complete. Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 11250.980 ; gain = 97.414 ; free physical = 312160 ; free virtual = 429558
+INFO: [Netlist 29-17] Analyzing 29204 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 17 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'pfm_top_i/static_region/base_clocking/clkwiz_hbm_aclk/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'pfm_top_i/static_region/base_clocking/clkwiz_kernel/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'pfm_top_i/static_region/base_clocking/clkwiz_kernel2/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'pfm_top_i/static_region/base_clocking/clkwiz_pcie/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'pfm_top_i/static_region/base_clocking/clkwiz_scheduler/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'pfm_top_i/static_region/base_clocking/clkwiz_sysclks/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'pfm_top_i/static_region/base_clocking/xmc_clk_ibuf/IBUF_OUT[0]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'pfm_top_i/static_region/iob_static/perst_n_out' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Constraints 18-4422] SNAPPING_MODE is set so implementation will use the DERIVED_RANGES which may be different then the GRID_RANGES.
+INFO: [Constraints 18-4421] A LAGUNA range, without usable sites, was added to DERIVED_RANGES for purposes of keeping the Programmable Unit together within the reconfigurable pblock.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:01:02 ; elapsed = 00:00:59 . Memory (MB): peak = 18504.566 ; gain = 1700.656 ; free physical = 305416 ; free virtual = 422778
+Restored from archive | CPU: 65.000000 secs | Memory: 1330.940971 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:01:03 ; elapsed = 00:01:00 . Memory (MB): peak = 18504.566 ; gain = 1700.656 ; free physical = 305329 ; free virtual = 422691
+Netlist sorting complete. Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.17 . Memory (MB): peak = 18504.566 ; gain = 0.000 ; free physical = 304869 ; free virtual = 422312
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 8111 instances were transformed.
+  BUFG => BUFGCE: 2 instances
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 3208 instances
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 4 instances
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 1911 instances
+  HBM_TWO_STACK_INTF => HBM_TWO_STACK_INTF (HBM_REF_CLK(x2), HBM_SNGLBLI_INTF_APB(x2), HBM_SNGLBLI_INTF_AXI(x32)): 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 3 instances
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 6 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 158 instances
+  RAM128X1S => RAM128X1S (MUXF7, RAMS64E(x2)): 2 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 354 instances
+  RAM16X1S => RAM32X1S (RAMS32): 15 instances
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 11 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 32 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 2284 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 55 instances
+  RAM32X1S => RAM32X1S (RAMS32): 2 instances
+  RAM512X1S => RAM512X1S (MUXF7(x4), MUXF8(x2), MUXF9, RAMS64E1(x8)): 2 instances
+  RAM64M8 => RAM64M8 (RAMD64E(x8)): 50 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 8 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 2 instances
+
+open_run: Time (s): cpu = 00:06:49 ; elapsed = 00:07:05 . Memory (MB): peak = 18535.578 ; gain = 10273.832 ; free physical = 303824 ; free virtual = 421282
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+report_utilization -name utilization_1
+report_utilization: Time (s): cpu = 00:12:45 ; elapsed = 00:02:58 . Memory (MB): peak = 23930.078 ; gain = 3159.938 ; free physical = 298647 ; free virtual = 416074
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_1_2/build_dir.hw.xilinx_u280_xdma_201920_3/link/vivado/vpl/.local/hw_platform/iprepo/iprepo/hbm_memory_subsystem_v1_0/component.xml. It will be created.
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_1_2/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/xo/ip_repo/ethz_ch_kernel_network_krnl_1_0/component.xml. It will be created.
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_1_2/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/xo/ip_repo/xilinx_com_hls_hls_bil_krnl_1_0/component.xml. It will be created.
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_1_2/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/xo/ip_repo/ethz_ch_kernel_cmac_krnl_1_0/component.xml. It will be created.

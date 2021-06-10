@@ -1,0 +1,1012 @@
+$DEVICE is [/opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm]
+$POSTSYSLINKTCL is [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/scripts/post_sys_link.tcl]
+g++ -I.//common/includes/xcl2 -I/opt/xilinx/xrt/include -I/opt/Xilinx/Vivado/2019.2/include -Wall -O0 -g -std=gnu++14 -DVITIS_PLATFORM=/opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm -fmessage-length=0 .//common/includes/xcl2/xcl2.cpp host/hls_bil_krnl/host.cpp  -o 'host/host'  -L/opt/xilinx/xrt/lib -lOpenCL -lpthread  -lrt -lstdc++
+mkdir -p ./_x.hw.xilinx_u280_xdma_201920_3
+/opt/Xilinx/Vivado/2019.2/bin/vivado -mode batch -source scripts/gen_xo.tcl -tclargs ./_x.hw.xilinx_u280_xdma_201920_3/network_krnl.xo network_krnl hw /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm xilinx_u280_xdma_201920_3 kernel/network_krnl/network_krnl.xml kernel/network_krnl/package_network_krnl.tcl
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source scripts/gen_xo.tcl
+# if { $::argc != 7 } {
+#     puts "ERROR: Program \"$::argv0\" requires 6 arguments!\n"
+#     puts "Usage: $::argv0 <xoname> <krnl_name> <target> <xpfm_path> <device> <xml_path> <package_tcl_path>\n"
+#     exit
+# }
+# set xoname  [lindex $::argv 0]
+# set krnl_name [lindex $::argv 1]
+# set target    [lindex $::argv 2]
+# set xpfm_path [lindex $::argv 3]
+# set device    [lindex $::argv 4]
+# set xml_path [lindex $::argv 5]
+# set package_tcl_path [lindex $::argv 6]
+# set suffix "${krnl_name}_${target}_${device}"
+# puts "INFO: ${xoname} ${krnl_name} ${target} ${xpfm_path} ${device}" 
+INFO: ./_x.hw.xilinx_u280_xdma_201920_3/network_krnl.xo network_krnl hw /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm xilinx_u280_xdma_201920_3
+# source -notrace ${package_tcl_path}
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build/fpga-network-stack/iprepo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.2/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'net_axis_register_slice_64' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_32_d1024' to 'axis_data_fifo_32_d1024' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_64_d1024' to 'axis_data_fifo_64_d1024' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_32_d256' to 'axis_data_fifo_32_d256' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_64_d256' to 'axis_data_fifo_64_d256' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_128_d1024' to 'axis_data_fifo_128_d1024' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_256_d1024' to 'axis_data_fifo_256_d1024' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_512_d1024' to 'axis_data_fifo_512_d1024' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_interconnect_merger_256' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_interconnect_merger_256' to 'axis_interconnect_merger_256' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_interconnect_128_2to1' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_interconnect_128_4to1' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_interconnect_256_2to1' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_interconnect_256_4to1' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_interconnect_512_2to1' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_interconnect_512_4to1' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_64_to_512_converter' to 'axis_64_to_512_converter' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_512_to_64_converter' to 'axis_512_to_64_converter' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_128_to_512_converter' to 'axis_128_to_512_converter' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_512_to_128_converter' to 'axis_512_to_128_converter' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_256_to_512_converter' to 'axis_256_to_512_converter' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_512_to_256_converter' to 'axis_512_to_256_converter' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_64_to_128_converter' to 'axis_64_to_128_converter' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_128_to_64_converter' to 'axis_128_to_64_converter' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_64_to_256_converter' to 'axis_64_to_256_converter' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_256_to_64_converter' to 'axis_256to_64_converter' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_data_fifo_cc_udp_meta' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_cc_udp_meta' to 'axis_data_fifo_cc_udp_meta' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_data_fifo_cc_udp_data' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_cc_udp_data' to 'axis_data_fifo_cc_udp_data' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_cc_512' to 'axis_data_fifo_cc_512' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_cc_256' to 'axis_data_fifo_cc_256' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_cc_128' to 'axis_data_fifo_cc_128' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_cc_64' to 'axis_data_fifo_cc_64' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_cc_32' to 'axis_data_fifo_cc_32' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_cc_16' to 'axis_data_fifo_cc_16' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_cc_8' to 'axis_data_fifo_cc_8' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ila_network_controller' to 'ila_network_controller' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ila_tasi' to 'ila_tasi' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ila_eventMerger' to 'ila_eventMerger' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ila_eventEngine' to 'ila_eventEngine' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ila_handler' to 'ila_handler' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ila_network_top_perf' to 'ila_network_top_perf' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ila_listen_port_table' to 'ila_listen_port_table' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ila_rx_app_if' to 'ila_rx_app_if' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axi_datamover_mem' to 'axi_datamover_mem' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axi_datamover_mem_unaligned' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axi_datamover_mem_unaligned' to 'axi_datamover_mem_unaligned' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_clock_converter_32' to 'axis_clock_converter_32' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_clock_converter_64' to 'axis_clock_converter_64' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_clock_converter_96' to 'axis_clock_converter_96' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_clock_converter_136' to 'axis_clock_converter_136' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_clock_converter_144' to 'axis_clock_converter_144' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_clock_converter_200' to 'axis_clock_converter_200' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axil_clock_converter' to 'axil_clock_converter' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axil_net_ctrl_clock_converter' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axil_net_ctrl_clock_converter' to 'axil_net_ctrl_clock_converter' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axil_controller_crossbar' to 'axil_controller_crossbar' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_8' to 'axis_register_slice_8' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_16' to 'axis_register_slice_16' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_24' to 'axis_register_slice_24' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_32' to 'axis_register_slice_32' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_48' to 'axis_register_slice_48' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_88' to 'axis_register_slice_88' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_96' to 'axis_register_slice_96' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_176' to 'axis_register_slice_176' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_64' to 'axis_register_slice_64' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_128' to 'axis_register_slice_128' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_256' to 'axis_register_slice_256' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_512' to 'axis_register_slice_512' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_96' to 'axis_data_fifo_96' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_160' to 'axis_data_fifo_160' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_160_cc' to 'axis_data_fifo_160_cc' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_512_cc' to 'axis_data_fifo_512_cc' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'fifo_generator_rdma_cmd' to 'fifo_generator_rdma_cmd' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'fifo_generator_rdma_data' to 'fifo_generator_rdma_data' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axi_register_slice' to 'axi_register_slice' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_interconnect_96_1to2' to 'axis_interconnect_96_1to2' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_interconnect_160_2to1' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_interconnect_160_2to1' to 'axis_interconnect_160_2to1' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_interconnect_64_1to2' to 'axis_interconnect_64_1to2' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_interconnect_512_1to2' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_interconnect_512_1to2' to 'axis_interconnect_512_1to2' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_register_slice_meta_56_0' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_meta_56_0' to 'axis_register_slice_meta_56_0' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_register_slice_meta_32_0' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_meta_32_0' to 'axis_register_slice_meta_32_0' is not allowed and is ignored.
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'Full_Flags_Reset_Value' from '0' to '1' has been ignored for IP 'axis_sync_fifo'
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_pkg_fifo_512' to 'axis_pkg_fifo_512' is not allowed and is ignored.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/net_axis_register_slice_64/net_axis_register_slice_64.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_data_fifo_32_d1024/axis_data_fifo_32_d1024.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_interconnect_merger_256/axis_interconnect_merger_256.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_interconnect_2to1/axis_interconnect_2to1.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_interconnect_3to1/axis_interconnect_3to1.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_interconnect_4to1/axis_interconnect_4to1.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_interconnect_128_2to1/axis_interconnect_128_2to1.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_interconnect_128_4to1/axis_interconnect_128_4to1.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_interconnect_256_2to1/axis_interconnect_256_2to1.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_interconnect_256_4to1/axis_interconnect_256_4to1.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_64_to_128_converter/axis_64_to_128_converter.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_128_to_64_converter/axis_128_to_64_converter.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_64_to_256_converter/axis_64_to_256_converter.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_256_to_64_converter/axis_256_to_64_converter.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/dhcp_client_ip/dhcp_client_ip.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_data_fifo_cc_udp_meta/axis_data_fifo_cc_udp_meta.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_data_fifo_cc_udp_data/axis_data_fifo_cc_udp_data.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_data_fifo_cc_512/axis_data_fifo_cc_512.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_data_fifo_cc_256/axis_data_fifo_cc_256.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_data_fifo_cc_128/axis_data_fifo_cc_128.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_data_fifo_cc_64/axis_data_fifo_cc_64.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_data_fifo_cc_32/axis_data_fifo_cc_32.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_data_fifo_cc_16/axis_data_fifo_cc_16.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_data_fifo_cc_8/axis_data_fifo_cc_8.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/ila_mem_inf/ila_mem_inf.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/ila_network_top/ila_network_top.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/ila_network_top2/ila_network_top2.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/ila_network_controller/ila_network_controller.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/ila_tasi/ila_tasi.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/ila_eventMerger/ila_eventMerger.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/ila_eventEngine/ila_eventEngine.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/ila_handler/ila_handler.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/ila_listen_port_table/ila_listen_port_table.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/ila_rx_app_if/ila_rx_app_if.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_clock_converter_32/axis_clock_converter_32.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_clock_converter_64/axis_clock_converter_64.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_clock_converter_96/axis_clock_converter_96.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_clock_converter_136/axis_clock_converter_136.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_clock_converter_144/axis_clock_converter_144.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_clock_converter_200/axis_clock_converter_200.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axil_clock_converter/axil_clock_converter.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axil_net_ctrl_clock_converter/axil_net_ctrl_clock_converter.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axil_controller_crossbar/axil_controller_crossbar.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_register_slice_96/axis_register_slice_96.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_register_slice_64/axis_register_slice_64.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_register_slice_256/axis_register_slice_256.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_data_fifo_96/axis_data_fifo_96.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_data_fifo_160/axis_data_fifo_160.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_data_fifo_160_cc/axis_data_fifo_160_cc.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/fifo_generator_rdma_cmd/fifo_generator_rdma_cmd.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/fifo_generator_rdma_data/fifo_generator_rdma_data.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axi_register_slice/axi_register_slice.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_interconnect_96_1to2/axis_interconnect_96_1to2.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_interconnect_160_2to1/axis_interconnect_160_2to1.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_interconnect_64_1to2/axis_interconnect_64_1to2.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_interconnect_512_1to2/axis_interconnect_512_1to2.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_sync_fifo/axis_sync_fifo.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/cmd_fifo_xgemac_rxif/cmd_fifo_xgemac_rxif.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/cmd_fifo_xgemac_txif/cmd_fifo_xgemac_txif.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_pkg_fifo_512/axis_pkg_fifo_512.xci'.
+WARNING: [IP_Flow 19-5101] Packaging a component with a SystemVerilog top file is not fully supported. Please refer to UG1118 'Creating and Packaging Custom IP'.
+INFO: [IP_Flow 19-1842] HDL Parser: Found include file "src/network_types.svh" from the top-level HDL file.
+INFO: [IP_Flow 19-1842] HDL Parser: Found include file "src/network_intf.svh" from the top-level HDL file.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axis_net_rx' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axis_net_tx' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_tcp_notification' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_tcp_open_status' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_tcp_port_status' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_tcp_rx_data' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_tcp_rx_meta' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_tcp_tx_status' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_udp_rx' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_udp_rx_meta' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_tcp_close_connection' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_tcp_listen_port' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_tcp_open_connection' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_tcp_read_pkg' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_tcp_tx_data' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_tcp_tx_meta' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_udp_tx' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_udp_tx_meta' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm00_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm01_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axi_control' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'interrupt' of definition 'xilinx.com:signal:interrupt:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'interrupt': Added interface parameter 'SENSITIVITY' with value 'LEVEL_HIGH'.
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'ap_rst_n'.
+WARNING: [IP_Flow 19-3507] File Group 'xilinx_anylanguagesynthesis (Synthesis)': The referenced subcore 'xilinx.com:ip:axis_interconnect:1.1' is not the latest version in the IP catalog. The latest version is 'xilinx.com:ip:axis_interconnect:2.1'.
+WARNING: [IP_Flow 19-3507] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': The referenced subcore 'xilinx.com:ip:axis_interconnect:1.1' is not the latest version in the IP catalog. The latest version is 'xilinx.com:ip:axis_interconnect:2.1'.
+WARNING: [IP_Flow 19-3507] File Group 'xilinx_implementation (Implementation)': The referenced subcore 'xilinx.com:ip:axis_interconnect:1.1' is not the latest version in the IP catalog. The latest version is 'xilinx.com:ip:axis_interconnect:2.1'.
+WARNING: [IP_Flow 19-3158] Bus Interface 'axis_net_rx': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'axis_net_tx': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_tcp_notification': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_tcp_open_status': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_tcp_port_status': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_tcp_rx_data': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_tcp_rx_meta': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_tcp_tx_status': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_udp_rx': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_udp_rx_meta': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_tcp_close_connection': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_tcp_listen_port': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_tcp_open_connection': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_tcp_read_pkg': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_tcp_tx_data': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_tcp_tx_meta': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_udp_tx': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_udp_tx_meta': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm00_axi': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm01_axi': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axi_control': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3157] Bus Interface 'ap_rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'ap_rst_n' is not *resetn - please double check the POLARITY setting.
+WARNING: [IP_Flow 19-3153] Bus Interface 'ap_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build/fpga-network-stack/iprepo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.2/data/ip'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/packaged_kernel_network_krnl_hw_xilinx_u280_xdma_201920_3/src/network_intf.svh:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/packaged_kernel_network_krnl_hw_xilinx_u280_xdma_201920_3/src/axis_data_reg.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/packaged_kernel_network_krnl_hw_xilinx_u280_xdma_201920_3/src/network_types.svh:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/packaged_kernel_network_krnl_hw_xilinx_u280_xdma_201920_3/src/axis_data_reg_array.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/packaged_kernel_network_krnl_hw_xilinx_u280_xdma_201920_3/src/axis_meta_reg.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/packaged_kernel_network_krnl_hw_xilinx_u280_xdma_201920_3/src/axis_udp_meta_reg.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/packaged_kernel_network_krnl_hw_xilinx_u280_xdma_201920_3/src/mem_single_inf.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/packaged_kernel_network_krnl_hw_xilinx_u280_xdma_201920_3/src/network_control_s_axi.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/packaged_kernel_network_krnl_hw_xilinx_u280_xdma_201920_3/src/network_stack.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/packaged_kernel_network_krnl_hw_xilinx_u280_xdma_201920_3/src/network_top.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/packaged_kernel_network_krnl_hw_xilinx_u280_xdma_201920_3/src/tcp_stack.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/packaged_kernel_network_krnl_hw_xilinx_u280_xdma_201920_3/src/udp_stack.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/packaged_kernel_network_krnl_hw_xilinx_u280_xdma_201920_3/src/network_krnl.sv:]
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2903.625 ; gain = 0.000 ; free physical = 61495 ; free virtual = 371587
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 's_axi_control'.
+# if {[file exists "${xoname}"]} {
+#     file delete -force "${xoname}"
+# }
+# package_xo -xo_path ${xoname} -kernel_name ${krnl_name} -ip_directory ./packaged_kernel_${suffix} -kernel_xml ${xml_path}
+WARNING: [Vivado 12-4404] The CPU emulation flow in v++ is only supported when using a packaged XO file that contains C-model files, none were found.
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 16 16:31:22 2021...
+mkdir -p ./_x.hw.xilinx_u280_xdma_201920_3
+/opt/Xilinx/Vitis/2019.2/bin/v++ -t hw --platform /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm --save-temps  --kernel_frequency 157 --advanced.param compiler.userPostSysLinkTcl=/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/scripts/post_sys_link.tcl  --dk chipscope:network_krnl_1:s_axis_tcp_listen_port --dk chipscope:network_krnl_1:m_axis_tcp_port_status --dk chipscope:network_krnl_1:m_axis_tcp_rx_data --dk chipscope:network_krnl_1:m_axis_tcp_notification --dk chipscope:network_krnl_1:s_axis_tcp_read_pkg --config ./kernel/user_krnl/hls_bil_krnl/config_sp_hls_bil_krnl.txt -c -k hls_bil_krnl -o ./_x.hw.xilinx_u280_xdma_201920_3/hls_bil_krnl.xo --input_files kernel/user_krnl/hls_bil_krnl/src/hls/*.cpp
+Option Map File Used: '/opt/Xilinx/Vitis/2019.2/data/vitis/vpp/optMap.xml'
+
+****** v++ v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/_x/reports/hls_bil_krnl
+	Log files: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/_x/logs/hls_bil_krnl
+Running Dispatch Server on port:42223
+INFO: [v++ 60-1548] Creating build summary session with primary output /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/_x.hw.xilinx_u280_xdma_201920_3/hls_bil_krnl.xo.compile_summary, at Tue Mar 16 16:35:22 2021
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Tue Mar 16 16:35:22 2021
+Running Rule Check Server on port:36171
+INFO: [v++ 60-1315] Creating rulecheck session with output '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/_x/reports/hls_bil_krnl/v++_compile_hls_bil_krnl_guidance.html', at Tue Mar 16 16:35:23 2021
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u280_xdma_201920_3/hw/xilinx_u280_xdma_201920_3.xsa'
+INFO: [v++ 60-585] Compiling for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u280_xdma_201920_3
+INFO: [v++ 60-242] Creating kernel: 'hls_bil_krnl'
+INFO: [v++ 60-1616] Creating a HLS clock using kernel_frequency option: 157 MHz
+
+===>The following messages were generated while  performing high-level synthesis for kernel: hls_bil_krnl Log file: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/_x/hls_bil_krnl/hls_bil_krnl/vivado_hls.log :
+INFO: [v++ 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [v++ 204-61] Pipelining loop 'Loop 1'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'Loop 1'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [v++ 204-61] Pipelining loop 'Loop 1'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'Loop 1.2'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [v++ 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [v++ 204-61] Pipelining loop 'Loop 1'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [v++ 204-61] Pipelining loop 'for_each_item_L'.
+INFO: [v++ 204-61] Pipelining result : Target II = 4, Final II = 4, Depth = 5.
+INFO: [v++ 204-61] Pipelining loop 'Loop 1'.
+INFO: [v++ 204-61] Pipelining result : Target II = 2, Final II = 2, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'Loop 1'.
+INFO: [v++ 204-61] Pipelining result : Target II = 2, Final II = 2, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'Loop 1'.
+INFO: [v++ 204-61] Pipelining result : Target II = 2, Final II = 2, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'Loop 1'.
+INFO: [v++ 204-61] Pipelining result : Target II = 2, Final II = 2, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'item_loop_dot_product'.
+INFO: [v++ 17-14] Message 'v++ 204-61' appears 100 times and further instances of the messages will be disabled.
+INFO: [v++ 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [v++ 200-789] **** Estimated Fmax: 216.08 MHz
+INFO: [v++ 60-594] Finished kernel compilation
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/_x/reports/hls_bil_krnl/system_estimate_hls_bil_krnl.xtxt
+Add Instance gather_results_256PEs_1_s gather_results_256PEs_1_U0 4562
+Add Instance sendData sendData_U0 4823
+Add Instance tie_off_udp tie_off_udp_U0 4859
+Add Instance output_layer output_layer_U0 4895
+Add Instance recvDataBilateral recvDataBilateral_U0 4903
+Add Instance recvData_handshake recvData_handshake_U0 116
+Add Instance recvData_consumeData_bilateral recvData_consumeData_bilateral_U0 148
+Add Instance matmul_PE_UNROLL8_layer3_512_0_209 matmul_PE_UNROLL8_layer3_512_0_209_U0 4948
+Add Instance matmul_PE_UNROLL8_layer3_512_1_210 matmul_PE_UNROLL8_layer3_512_1_210_U0 4956
+Add Instance matmul_PE_UNROLL8_layer3_512_0_211 matmul_PE_UNROLL8_layer3_512_0_211_U0 4964
+Add Instance matmul_PE_UNROLL8_layer3_512_1_212 matmul_PE_UNROLL8_layer3_512_1_212_U0 4972
+Add Instance matmul_PE_UNROLL8_layer3_512_0_213 matmul_PE_UNROLL8_layer3_512_0_213_U0 4980
+Add Instance matmul_PE_UNROLL8_layer3_512_1_214 matmul_PE_UNROLL8_layer3_512_1_214_U0 4988
+Add Instance matmul_PE_UNROLL8_layer3_512_0_215 matmul_PE_UNROLL8_layer3_512_0_215_U0 4996
+Add Instance matmul_PE_UNROLL8_layer3_512_1_216 matmul_PE_UNROLL8_layer3_512_1_216_U0 5004
+Add Instance matmul_PE_UNROLL8_layer3_512_0_217 matmul_PE_UNROLL8_layer3_512_0_217_U0 5012
+Add Instance matmul_PE_UNROLL8_layer3_512_1_218 matmul_PE_UNROLL8_layer3_512_1_218_U0 5020
+Add Instance matmul_PE_UNROLL8_layer3_512_0_219 matmul_PE_UNROLL8_layer3_512_0_219_U0 5028
+Add Instance matmul_PE_UNROLL8_layer3_512_1_220 matmul_PE_UNROLL8_layer3_512_1_220_U0 5036
+Add Instance matmul_PE_UNROLL8_layer3_512_0_221 matmul_PE_UNROLL8_layer3_512_0_221_U0 5044
+Add Instance matmul_PE_UNROLL8_layer3_512_1_222 matmul_PE_UNROLL8_layer3_512_1_222_U0 5052
+Add Instance matmul_PE_UNROLL8_layer3_512_0_223 matmul_PE_UNROLL8_layer3_512_0_223_U0 5060
+Add Instance matmul_PE_UNROLL8_layer3_512_1_224 matmul_PE_UNROLL8_layer3_512_1_224_U0 5068
+Add Instance matmul_PE_UNROLL8_layer3_512_0_225 matmul_PE_UNROLL8_layer3_512_0_225_U0 5076
+Add Instance matmul_PE_UNROLL8_layer3_512_1_226 matmul_PE_UNROLL8_layer3_512_1_226_U0 5084
+Add Instance matmul_PE_UNROLL8_layer3_512_0_227 matmul_PE_UNROLL8_layer3_512_0_227_U0 5092
+Add Instance matmul_PE_UNROLL8_layer3_512_1_228 matmul_PE_UNROLL8_layer3_512_1_228_U0 5100
+Add Instance matmul_PE_UNROLL8_layer3_512_0_229 matmul_PE_UNROLL8_layer3_512_0_229_U0 5108
+Add Instance matmul_PE_UNROLL8_layer3_512_1_230 matmul_PE_UNROLL8_layer3_512_1_230_U0 5116
+Add Instance matmul_PE_UNROLL8_layer3_512_0_231 matmul_PE_UNROLL8_layer3_512_0_231_U0 5124
+Add Instance matmul_PE_UNROLL8_layer3_512_1_232 matmul_PE_UNROLL8_layer3_512_1_232_U0 5132
+Add Instance matmul_PE_UNROLL8_layer3_512_0_233 matmul_PE_UNROLL8_layer3_512_0_233_U0 5140
+Add Instance matmul_PE_UNROLL8_layer3_512_1_234 matmul_PE_UNROLL8_layer3_512_1_234_U0 5148
+Add Instance matmul_PE_UNROLL8_layer3_512_0_235 matmul_PE_UNROLL8_layer3_512_0_235_U0 5156
+Add Instance matmul_PE_UNROLL8_layer3_512_1_236 matmul_PE_UNROLL8_layer3_512_1_236_U0 5164
+Add Instance matmul_PE_UNROLL8_layer3_512_0_237 matmul_PE_UNROLL8_layer3_512_0_237_U0 5172
+Add Instance matmul_PE_UNROLL8_layer3_512_1_238 matmul_PE_UNROLL8_layer3_512_1_238_U0 5180
+Add Instance matmul_PE_UNROLL8_layer3_512_0_239 matmul_PE_UNROLL8_layer3_512_0_239_U0 5188
+Add Instance matmul_PE_UNROLL8_layer3_512_1_240 matmul_PE_UNROLL8_layer3_512_1_240_U0 5196
+Add Instance matmul_PE_UNROLL8_layer3_512_0_241 matmul_PE_UNROLL8_layer3_512_0_241_U0 5204
+Add Instance matmul_PE_UNROLL8_layer3_512_1_242 matmul_PE_UNROLL8_layer3_512_1_242_U0 5212
+Add Instance matmul_PE_UNROLL8_layer3_512_0_243 matmul_PE_UNROLL8_layer3_512_0_243_U0 5220
+Add Instance matmul_PE_UNROLL8_layer3_512_1_244 matmul_PE_UNROLL8_layer3_512_1_244_U0 5228
+Add Instance matmul_PE_UNROLL8_layer3_512_0_245 matmul_PE_UNROLL8_layer3_512_0_245_U0 5236
+Add Instance matmul_PE_UNROLL8_layer3_512_1_246 matmul_PE_UNROLL8_layer3_512_1_246_U0 5244
+Add Instance matmul_PE_UNROLL8_layer3_512_0_247 matmul_PE_UNROLL8_layer3_512_0_247_U0 5252
+Add Instance matmul_PE_UNROLL8_layer3_512_1_248 matmul_PE_UNROLL8_layer3_512_1_248_U0 5260
+Add Instance matmul_PE_UNROLL8_layer3_512_0_249 matmul_PE_UNROLL8_layer3_512_0_249_U0 5268
+Add Instance matmul_PE_UNROLL8_layer3_512_1_250 matmul_PE_UNROLL8_layer3_512_1_250_U0 5276
+Add Instance matmul_PE_UNROLL8_layer3_512_0_251 matmul_PE_UNROLL8_layer3_512_0_251_U0 5284
+Add Instance matmul_PE_UNROLL8_layer3_512_1_252 matmul_PE_UNROLL8_layer3_512_1_252_U0 5292
+Add Instance matmul_PE_UNROLL8_layer3_512_0_253 matmul_PE_UNROLL8_layer3_512_0_253_U0 5300
+Add Instance matmul_PE_UNROLL8_layer3_512_1_254 matmul_PE_UNROLL8_layer3_512_1_254_U0 5308
+Add Instance matmul_PE_UNROLL8_layer3_512_0_255 matmul_PE_UNROLL8_layer3_512_0_255_U0 5316
+Add Instance matmul_PE_UNROLL8_layer3_512_1_256 matmul_PE_UNROLL8_layer3_512_1_256_U0 5324
+Add Instance matmul_PE_UNROLL8_layer3_512_0_257 matmul_PE_UNROLL8_layer3_512_0_257_U0 5332
+Add Instance matmul_PE_UNROLL8_layer3_512_1_258 matmul_PE_UNROLL8_layer3_512_1_258_U0 5340
+Add Instance matmul_PE_UNROLL8_layer3_512_0_259 matmul_PE_UNROLL8_layer3_512_0_259_U0 5348
+Add Instance matmul_PE_UNROLL8_layer3_512_1_260 matmul_PE_UNROLL8_layer3_512_1_260_U0 5356
+Add Instance matmul_PE_UNROLL8_layer3_512_0_261 matmul_PE_UNROLL8_layer3_512_0_261_U0 5364
+Add Instance matmul_PE_UNROLL8_layer3_512_1_262 matmul_PE_UNROLL8_layer3_512_1_262_U0 5372
+Add Instance matmul_PE_UNROLL8_layer3_512_0_263 matmul_PE_UNROLL8_layer3_512_0_263_U0 5380
+Add Instance matmul_PE_UNROLL8_layer3_512_1_264 matmul_PE_UNROLL8_layer3_512_1_264_U0 5388
+Add Instance matmul_PE_UNROLL8_layer3_512_0_265 matmul_PE_UNROLL8_layer3_512_0_265_U0 5396
+Add Instance matmul_PE_UNROLL8_layer3_512_1_266 matmul_PE_UNROLL8_layer3_512_1_266_U0 5404
+Add Instance matmul_PE_UNROLL8_layer3_512_0_267 matmul_PE_UNROLL8_layer3_512_0_267_U0 5412
+Add Instance matmul_PE_UNROLL8_layer3_512_1_268 matmul_PE_UNROLL8_layer3_512_1_268_U0 5420
+Add Instance matmul_PE_UNROLL8_layer3_512_0_269 matmul_PE_UNROLL8_layer3_512_0_269_U0 5428
+Add Instance matmul_PE_UNROLL8_layer3_512_1_270 matmul_PE_UNROLL8_layer3_512_1_270_U0 5436
+Add Instance matmul_PE_UNROLL8_layer3_512_0_271 matmul_PE_UNROLL8_layer3_512_0_271_U0 5444
+Add Instance matmul_PE_UNROLL8_layer3_512_1_272 matmul_PE_UNROLL8_layer3_512_1_272_U0 5452
+Add Instance matmul_PE_UNROLL8_layer3_512_0_273 matmul_PE_UNROLL8_layer3_512_0_273_U0 5460
+Add Instance matmul_PE_UNROLL8_layer3_512_1_274 matmul_PE_UNROLL8_layer3_512_1_274_U0 5468
+Add Instance matmul_PE_UNROLL8_layer3_512_0_275 matmul_PE_UNROLL8_layer3_512_0_275_U0 5476
+Add Instance matmul_PE_UNROLL8_layer3_512_1_276 matmul_PE_UNROLL8_layer3_512_1_276_U0 5484
+Add Instance matmul_PE_UNROLL8_layer3_512_0_277 matmul_PE_UNROLL8_layer3_512_0_277_U0 5492
+Add Instance matmul_PE_UNROLL8_layer3_512_1_278 matmul_PE_UNROLL8_layer3_512_1_278_U0 5500
+Add Instance matmul_PE_UNROLL8_layer3_512_0_279 matmul_PE_UNROLL8_layer3_512_0_279_U0 5508
+Add Instance matmul_PE_UNROLL8_layer3_512_1_280 matmul_PE_UNROLL8_layer3_512_1_280_U0 5516
+Add Instance matmul_PE_UNROLL8_layer3_512_0_281 matmul_PE_UNROLL8_layer3_512_0_281_U0 5524
+Add Instance matmul_PE_UNROLL8_layer3_512_1_282 matmul_PE_UNROLL8_layer3_512_1_282_U0 5532
+Add Instance matmul_PE_UNROLL8_layer3_512_0_283 matmul_PE_UNROLL8_layer3_512_0_283_U0 5540
+Add Instance matmul_PE_UNROLL8_layer3_512_1_284 matmul_PE_UNROLL8_layer3_512_1_284_U0 5548
+Add Instance matmul_PE_UNROLL8_layer3_512_0_285 matmul_PE_UNROLL8_layer3_512_0_285_U0 5556
+Add Instance matmul_PE_UNROLL8_layer3_512_1_286 matmul_PE_UNROLL8_layer3_512_1_286_U0 5564
+Add Instance matmul_PE_UNROLL8_layer3_512_0_287 matmul_PE_UNROLL8_layer3_512_0_287_U0 5572
+Add Instance matmul_PE_UNROLL8_layer3_512_1_288 matmul_PE_UNROLL8_layer3_512_1_288_U0 5580
+Add Instance matmul_PE_UNROLL8_layer3_512_0_289 matmul_PE_UNROLL8_layer3_512_0_289_U0 5588
+Add Instance matmul_PE_UNROLL8_layer3_512_1_290 matmul_PE_UNROLL8_layer3_512_1_290_U0 5596
+Add Instance matmul_PE_UNROLL8_layer3_512_0_291 matmul_PE_UNROLL8_layer3_512_0_291_U0 5604
+Add Instance matmul_PE_UNROLL8_layer3_512_1_292 matmul_PE_UNROLL8_layer3_512_1_292_U0 5612
+Add Instance matmul_PE_UNROLL8_layer3_512_0_293 matmul_PE_UNROLL8_layer3_512_0_293_U0 5620
+Add Instance matmul_PE_UNROLL8_layer3_512_1_294 matmul_PE_UNROLL8_layer3_512_1_294_U0 5628
+Add Instance matmul_PE_UNROLL8_layer3_512_0_295 matmul_PE_UNROLL8_layer3_512_0_295_U0 5636
+Add Instance matmul_PE_UNROLL8_layer3_512_1_296 matmul_PE_UNROLL8_layer3_512_1_296_U0 5644
+Add Instance matmul_PE_UNROLL8_layer3_512_0_297 matmul_PE_UNROLL8_layer3_512_0_297_U0 5652
+Add Instance matmul_PE_UNROLL8_layer3_512_1_298 matmul_PE_UNROLL8_layer3_512_1_298_U0 5660
+Add Instance matmul_PE_UNROLL8_layer3_512_0_299 matmul_PE_UNROLL8_layer3_512_0_299_U0 5668
+Add Instance matmul_PE_UNROLL8_layer3_512_1_300 matmul_PE_UNROLL8_layer3_512_1_300_U0 5676
+Add Instance matmul_PE_UNROLL8_layer3_512_0_301 matmul_PE_UNROLL8_layer3_512_0_301_U0 5684
+Add Instance matmul_PE_UNROLL8_layer3_512_1_302 matmul_PE_UNROLL8_layer3_512_1_302_U0 5692
+Add Instance matmul_PE_UNROLL8_layer3_512_0_303 matmul_PE_UNROLL8_layer3_512_0_303_U0 5700
+Add Instance matmul_PE_UNROLL8_layer3_512_1_304 matmul_PE_UNROLL8_layer3_512_1_304_U0 5708
+Add Instance matmul_PE_UNROLL8_layer3_512_0_305 matmul_PE_UNROLL8_layer3_512_0_305_U0 5716
+Add Instance matmul_PE_UNROLL8_layer3_512_1_306 matmul_PE_UNROLL8_layer3_512_1_306_U0 5724
+Add Instance matmul_PE_UNROLL8_layer3_512_0_307 matmul_PE_UNROLL8_layer3_512_0_307_U0 5732
+Add Instance matmul_PE_UNROLL8_layer3_512_1_308 matmul_PE_UNROLL8_layer3_512_1_308_U0 5740
+Add Instance matmul_PE_UNROLL8_layer3_512_0_309 matmul_PE_UNROLL8_layer3_512_0_309_U0 5748
+Add Instance matmul_PE_UNROLL8_layer3_512_1_310 matmul_PE_UNROLL8_layer3_512_1_310_U0 5756
+Add Instance matmul_PE_UNROLL8_layer3_512_0_311 matmul_PE_UNROLL8_layer3_512_0_311_U0 5764
+Add Instance matmul_PE_UNROLL8_layer3_512_1_312 matmul_PE_UNROLL8_layer3_512_1_312_U0 5772
+Add Instance matmul_PE_UNROLL8_layer3_512_0_313 matmul_PE_UNROLL8_layer3_512_0_313_U0 5780
+Add Instance matmul_PE_UNROLL8_layer3_512_1_314 matmul_PE_UNROLL8_layer3_512_1_314_U0 5788
+Add Instance matmul_PE_UNROLL8_layer3_512_0_315 matmul_PE_UNROLL8_layer3_512_0_315_U0 5796
+Add Instance matmul_PE_UNROLL8_layer3_512_1_316 matmul_PE_UNROLL8_layer3_512_1_316_U0 5804
+Add Instance matmul_PE_UNROLL8_layer3_512_0_317 matmul_PE_UNROLL8_layer3_512_0_317_U0 5812
+Add Instance matmul_PE_UNROLL8_layer3_512_1_318 matmul_PE_UNROLL8_layer3_512_1_318_U0 5820
+Add Instance matmul_PE_UNROLL8_layer3_512_0_319 matmul_PE_UNROLL8_layer3_512_0_319_U0 5828
+Add Instance matmul_PE_UNROLL8_layer3_512_1_320 matmul_PE_UNROLL8_layer3_512_1_320_U0 5836
+Add Instance matmul_PE_UNROLL8_layer3_512_0_321 matmul_PE_UNROLL8_layer3_512_0_321_U0 5844
+Add Instance matmul_PE_UNROLL8_layer3_512_1_322 matmul_PE_UNROLL8_layer3_512_1_322_U0 5852
+Add Instance matmul_PE_UNROLL8_layer3_512_0_323 matmul_PE_UNROLL8_layer3_512_0_323_U0 5860
+Add Instance matmul_PE_UNROLL8_layer3_512_1_324 matmul_PE_UNROLL8_layer3_512_1_324_U0 5868
+Add Instance matmul_PE_UNROLL8_layer3_512_0_325 matmul_PE_UNROLL8_layer3_512_0_325_U0 5876
+Add Instance matmul_PE_UNROLL8_layer3_512_1_326 matmul_PE_UNROLL8_layer3_512_1_326_U0 5884
+Add Instance matmul_PE_UNROLL8_layer3_512_0_327 matmul_PE_UNROLL8_layer3_512_0_327_U0 5892
+Add Instance matmul_PE_UNROLL8_layer3_512_1_328 matmul_PE_UNROLL8_layer3_512_1_328_U0 5900
+Add Instance matmul_PE_UNROLL8_layer3_512_0_329 matmul_PE_UNROLL8_layer3_512_0_329_U0 5908
+Add Instance matmul_PE_UNROLL8_layer3_512_1_330 matmul_PE_UNROLL8_layer3_512_1_330_U0 5916
+Add Instance matmul_PE_UNROLL8_layer3_512_0_331 matmul_PE_UNROLL8_layer3_512_0_331_U0 5924
+Add Instance matmul_PE_UNROLL8_layer3_512_1_332 matmul_PE_UNROLL8_layer3_512_1_332_U0 5932
+Add Instance matmul_PE_UNROLL8_layer3_512_0_333 matmul_PE_UNROLL8_layer3_512_0_333_U0 5940
+Add Instance matmul_PE_UNROLL8_layer3_512_1_334 matmul_PE_UNROLL8_layer3_512_1_334_U0 5948
+Add Instance matmul_PE_UNROLL8_layer3_512_0_335 matmul_PE_UNROLL8_layer3_512_0_335_U0 5956
+Add Instance matmul_PE_UNROLL8_layer3_512_1_336 matmul_PE_UNROLL8_layer3_512_1_336_U0 5964
+Add Instance matmul_PE_UNROLL8_layer3_512_0_337 matmul_PE_UNROLL8_layer3_512_0_337_U0 5972
+Add Instance matmul_PE_UNROLL8_layer3_512_1_338 matmul_PE_UNROLL8_layer3_512_1_338_U0 5980
+Add Instance matmul_PE_UNROLL8_layer3_512_0_339 matmul_PE_UNROLL8_layer3_512_0_339_U0 5988
+Add Instance matmul_PE_UNROLL8_layer3_512_1_340 matmul_PE_UNROLL8_layer3_512_1_340_U0 5996
+Add Instance matmul_PE_UNROLL8_layer3_512_0_341 matmul_PE_UNROLL8_layer3_512_0_341_U0 6004
+Add Instance matmul_PE_UNROLL8_layer3_512_1_342 matmul_PE_UNROLL8_layer3_512_1_342_U0 6012
+Add Instance matmul_PE_UNROLL8_layer3_512_0_343 matmul_PE_UNROLL8_layer3_512_0_343_U0 6020
+Add Instance matmul_PE_UNROLL8_layer3_512_1_344 matmul_PE_UNROLL8_layer3_512_1_344_U0 6028
+Add Instance matmul_PE_UNROLL8_layer3_512_0_345 matmul_PE_UNROLL8_layer3_512_0_345_U0 6036
+Add Instance matmul_PE_UNROLL8_layer3_512_1_346 matmul_PE_UNROLL8_layer3_512_1_346_U0 6044
+Add Instance matmul_PE_UNROLL8_layer3_512_0_347 matmul_PE_UNROLL8_layer3_512_0_347_U0 6052
+Add Instance matmul_PE_UNROLL8_layer3_512_1_348 matmul_PE_UNROLL8_layer3_512_1_348_U0 6060
+Add Instance matmul_PE_UNROLL8_layer3_512_0_349 matmul_PE_UNROLL8_layer3_512_0_349_U0 6068
+Add Instance matmul_PE_UNROLL8_layer3_512_1_350 matmul_PE_UNROLL8_layer3_512_1_350_U0 6076
+Add Instance matmul_PE_UNROLL8_layer3_512_0_351 matmul_PE_UNROLL8_layer3_512_0_351_U0 6084
+Add Instance matmul_PE_UNROLL8_layer3_512_1_352 matmul_PE_UNROLL8_layer3_512_1_352_U0 6092
+Add Instance matmul_PE_UNROLL8_layer3_512_0_353 matmul_PE_UNROLL8_layer3_512_0_353_U0 6100
+Add Instance matmul_PE_UNROLL8_layer3_512_1_354 matmul_PE_UNROLL8_layer3_512_1_354_U0 6108
+Add Instance matmul_PE_UNROLL8_layer3_512_0_355 matmul_PE_UNROLL8_layer3_512_0_355_U0 6116
+Add Instance matmul_PE_UNROLL8_layer3_512_1_356 matmul_PE_UNROLL8_layer3_512_1_356_U0 6124
+Add Instance matmul_PE_UNROLL8_layer3_512_0_357 matmul_PE_UNROLL8_layer3_512_0_357_U0 6132
+Add Instance matmul_PE_UNROLL8_layer3_512_1_358 matmul_PE_UNROLL8_layer3_512_1_358_U0 6140
+Add Instance matmul_PE_UNROLL8_layer3_512_0_359 matmul_PE_UNROLL8_layer3_512_0_359_U0 6148
+Add Instance matmul_PE_UNROLL8_layer3_512_1_360 matmul_PE_UNROLL8_layer3_512_1_360_U0 6156
+Add Instance matmul_PE_UNROLL8_layer3_512_0_361 matmul_PE_UNROLL8_layer3_512_0_361_U0 6164
+Add Instance matmul_PE_UNROLL8_layer3_512_1_362 matmul_PE_UNROLL8_layer3_512_1_362_U0 6172
+Add Instance matmul_PE_UNROLL8_layer3_512_0_363 matmul_PE_UNROLL8_layer3_512_0_363_U0 6180
+Add Instance matmul_PE_UNROLL8_layer3_512_1_364 matmul_PE_UNROLL8_layer3_512_1_364_U0 6188
+Add Instance matmul_PE_UNROLL8_layer3_512_0_365 matmul_PE_UNROLL8_layer3_512_0_365_U0 6196
+Add Instance matmul_PE_UNROLL8_layer3_512_1_366 matmul_PE_UNROLL8_layer3_512_1_366_U0 6204
+Add Instance matmul_PE_UNROLL8_layer3_512_0_367 matmul_PE_UNROLL8_layer3_512_0_367_U0 6212
+Add Instance matmul_PE_UNROLL8_layer3_512_1_368 matmul_PE_UNROLL8_layer3_512_1_368_U0 6220
+Add Instance matmul_PE_UNROLL8_layer3_512_0_369 matmul_PE_UNROLL8_layer3_512_0_369_U0 6228
+Add Instance matmul_PE_UNROLL8_layer3_512_1_370 matmul_PE_UNROLL8_layer3_512_1_370_U0 6236
+Add Instance matmul_PE_UNROLL8_layer3_512_0_371 matmul_PE_UNROLL8_layer3_512_0_371_U0 6244
+Add Instance matmul_PE_UNROLL8_layer3_512_1_372 matmul_PE_UNROLL8_layer3_512_1_372_U0 6252
+Add Instance matmul_PE_UNROLL8_layer3_512_0_373 matmul_PE_UNROLL8_layer3_512_0_373_U0 6260
+Add Instance matmul_PE_UNROLL8_layer3_512_1_374 matmul_PE_UNROLL8_layer3_512_1_374_U0 6268
+Add Instance matmul_PE_UNROLL8_layer3_512_0_375 matmul_PE_UNROLL8_layer3_512_0_375_U0 6276
+Add Instance matmul_PE_UNROLL8_layer3_512_1_376 matmul_PE_UNROLL8_layer3_512_1_376_U0 6284
+Add Instance matmul_PE_UNROLL8_layer3_512_0_377 matmul_PE_UNROLL8_layer3_512_0_377_U0 6292
+Add Instance matmul_PE_UNROLL8_layer3_512_1_378 matmul_PE_UNROLL8_layer3_512_1_378_U0 6300
+Add Instance matmul_PE_UNROLL8_layer3_512_0_379 matmul_PE_UNROLL8_layer3_512_0_379_U0 6308
+Add Instance matmul_PE_UNROLL8_layer3_512_1_380 matmul_PE_UNROLL8_layer3_512_1_380_U0 6316
+Add Instance matmul_PE_UNROLL8_layer3_512_0_381 matmul_PE_UNROLL8_layer3_512_0_381_U0 6324
+Add Instance matmul_PE_UNROLL8_layer3_512_1_382 matmul_PE_UNROLL8_layer3_512_1_382_U0 6332
+Add Instance matmul_PE_UNROLL8_layer3_512_0_383 matmul_PE_UNROLL8_layer3_512_0_383_U0 6340
+Add Instance matmul_PE_UNROLL8_layer3_512_1_384 matmul_PE_UNROLL8_layer3_512_1_384_U0 6348
+Add Instance matmul_PE_UNROLL8_layer3_512_0_385 matmul_PE_UNROLL8_layer3_512_0_385_U0 6356
+Add Instance matmul_PE_UNROLL8_layer3_512_1_386 matmul_PE_UNROLL8_layer3_512_1_386_U0 6364
+Add Instance matmul_PE_UNROLL8_layer3_512_0_387 matmul_PE_UNROLL8_layer3_512_0_387_U0 6372
+Add Instance matmul_PE_UNROLL8_layer3_512_1_388 matmul_PE_UNROLL8_layer3_512_1_388_U0 6380
+Add Instance matmul_PE_UNROLL8_layer3_512_0_389 matmul_PE_UNROLL8_layer3_512_0_389_U0 6388
+Add Instance matmul_PE_UNROLL8_layer3_512_1_390 matmul_PE_UNROLL8_layer3_512_1_390_U0 6396
+Add Instance matmul_PE_UNROLL8_layer3_512_0_391 matmul_PE_UNROLL8_layer3_512_0_391_U0 6404
+Add Instance matmul_PE_UNROLL8_layer3_512_1_392 matmul_PE_UNROLL8_layer3_512_1_392_U0 6412
+Add Instance matmul_PE_UNROLL8_layer3_512_0_393 matmul_PE_UNROLL8_layer3_512_0_393_U0 6420
+Add Instance matmul_PE_UNROLL8_layer3_512_1_394 matmul_PE_UNROLL8_layer3_512_1_394_U0 6428
+Add Instance matmul_PE_UNROLL8_layer3_512_0_395 matmul_PE_UNROLL8_layer3_512_0_395_U0 6436
+Add Instance matmul_PE_UNROLL8_layer3_512_1_396 matmul_PE_UNROLL8_layer3_512_1_396_U0 6444
+Add Instance matmul_PE_UNROLL8_layer3_512_0_397 matmul_PE_UNROLL8_layer3_512_0_397_U0 6452
+Add Instance matmul_PE_UNROLL8_layer3_512_1_398 matmul_PE_UNROLL8_layer3_512_1_398_U0 6460
+Add Instance matmul_PE_UNROLL8_layer3_512_0_399 matmul_PE_UNROLL8_layer3_512_0_399_U0 6468
+Add Instance matmul_PE_UNROLL8_layer3_512_1_400 matmul_PE_UNROLL8_layer3_512_1_400_U0 6476
+Add Instance matmul_PE_UNROLL8_layer3_512_0_401 matmul_PE_UNROLL8_layer3_512_0_401_U0 6484
+Add Instance matmul_PE_UNROLL8_layer3_512_1_402 matmul_PE_UNROLL8_layer3_512_1_402_U0 6492
+Add Instance matmul_PE_UNROLL8_layer3_512_0_403 matmul_PE_UNROLL8_layer3_512_0_403_U0 6500
+Add Instance matmul_PE_UNROLL8_layer3_512_1_404 matmul_PE_UNROLL8_layer3_512_1_404_U0 6508
+Add Instance matmul_PE_UNROLL8_layer3_512_0_405 matmul_PE_UNROLL8_layer3_512_0_405_U0 6516
+Add Instance matmul_PE_UNROLL8_layer3_512_1_406 matmul_PE_UNROLL8_layer3_512_1_406_U0 6524
+Add Instance matmul_PE_UNROLL8_layer3_512_0_407 matmul_PE_UNROLL8_layer3_512_0_407_U0 6532
+Add Instance matmul_PE_UNROLL8_layer3_512_1_408 matmul_PE_UNROLL8_layer3_512_1_408_U0 6540
+Add Instance matmul_PE_UNROLL8_layer3_512_0_409 matmul_PE_UNROLL8_layer3_512_0_409_U0 6548
+Add Instance matmul_PE_UNROLL8_layer3_512_1_410 matmul_PE_UNROLL8_layer3_512_1_410_U0 6556
+Add Instance matmul_PE_UNROLL8_layer3_512_0_411 matmul_PE_UNROLL8_layer3_512_0_411_U0 6564
+Add Instance matmul_PE_UNROLL8_layer3_512_1_412 matmul_PE_UNROLL8_layer3_512_1_412_U0 6572
+Add Instance matmul_PE_UNROLL8_layer3_512_0_413 matmul_PE_UNROLL8_layer3_512_0_413_U0 6580
+Add Instance matmul_PE_UNROLL8_layer3_512_1_414 matmul_PE_UNROLL8_layer3_512_1_414_U0 6588
+Add Instance matmul_PE_UNROLL8_layer3_512_0_415 matmul_PE_UNROLL8_layer3_512_0_415_U0 6596
+Add Instance matmul_PE_UNROLL8_layer3_512_1_416 matmul_PE_UNROLL8_layer3_512_1_416_U0 6604
+Add Instance matmul_PE_UNROLL8_layer3_512_0_417 matmul_PE_UNROLL8_layer3_512_0_417_U0 6612
+Add Instance matmul_PE_UNROLL8_layer3_512_1_418 matmul_PE_UNROLL8_layer3_512_1_418_U0 6620
+Add Instance matmul_PE_UNROLL8_layer3_512_0_419 matmul_PE_UNROLL8_layer3_512_0_419_U0 6628
+Add Instance matmul_PE_UNROLL8_layer3_512_1_420 matmul_PE_UNROLL8_layer3_512_1_420_U0 6636
+Add Instance matmul_PE_UNROLL8_layer3_512_0_421 matmul_PE_UNROLL8_layer3_512_0_421_U0 6644
+Add Instance matmul_PE_UNROLL8_layer3_512_1_422 matmul_PE_UNROLL8_layer3_512_1_422_U0 6652
+Add Instance matmul_PE_UNROLL8_layer3_512_0_423 matmul_PE_UNROLL8_layer3_512_0_423_U0 6660
+Add Instance matmul_PE_UNROLL8_layer3_512_1_424 matmul_PE_UNROLL8_layer3_512_1_424_U0 6668
+Add Instance matmul_PE_UNROLL8_layer3_512_0_425 matmul_PE_UNROLL8_layer3_512_0_425_U0 6676
+Add Instance matmul_PE_UNROLL8_layer3_512_1_426 matmul_PE_UNROLL8_layer3_512_1_426_U0 6684
+Add Instance matmul_PE_UNROLL8_layer3_512_0_427 matmul_PE_UNROLL8_layer3_512_0_427_U0 6692
+Add Instance matmul_PE_UNROLL8_layer3_512_1_428 matmul_PE_UNROLL8_layer3_512_1_428_U0 6700
+Add Instance matmul_PE_UNROLL8_layer3_512_0_429 matmul_PE_UNROLL8_layer3_512_0_429_U0 6708
+Add Instance matmul_PE_UNROLL8_layer3_512_1_430 matmul_PE_UNROLL8_layer3_512_1_430_U0 6716
+Add Instance matmul_PE_UNROLL8_layer3_512_0_431 matmul_PE_UNROLL8_layer3_512_0_431_U0 6724
+Add Instance matmul_PE_UNROLL8_layer3_512_1_432 matmul_PE_UNROLL8_layer3_512_1_432_U0 6732
+Add Instance matmul_PE_UNROLL8_layer3_512_0_433 matmul_PE_UNROLL8_layer3_512_0_433_U0 6740
+Add Instance matmul_PE_UNROLL8_layer3_512_1_434 matmul_PE_UNROLL8_layer3_512_1_434_U0 6748
+Add Instance matmul_PE_UNROLL8_layer3_512_0_435 matmul_PE_UNROLL8_layer3_512_0_435_U0 6756
+Add Instance matmul_PE_UNROLL8_layer3_512_1_436 matmul_PE_UNROLL8_layer3_512_1_436_U0 6764
+Add Instance matmul_PE_UNROLL8_layer3_512_0_437 matmul_PE_UNROLL8_layer3_512_0_437_U0 6772
+Add Instance matmul_PE_UNROLL8_layer3_512_1_438 matmul_PE_UNROLL8_layer3_512_1_438_U0 6780
+Add Instance matmul_PE_UNROLL8_layer3_512_0_439 matmul_PE_UNROLL8_layer3_512_0_439_U0 6788
+Add Instance matmul_PE_UNROLL8_layer3_512_1_440 matmul_PE_UNROLL8_layer3_512_1_440_U0 6796
+Add Instance matmul_PE_UNROLL8_layer3_512_0_441 matmul_PE_UNROLL8_layer3_512_0_441_U0 6804
+Add Instance matmul_PE_UNROLL8_layer3_512_1_442 matmul_PE_UNROLL8_layer3_512_1_442_U0 6812
+Add Instance matmul_PE_UNROLL8_layer3_512_0_443 matmul_PE_UNROLL8_layer3_512_0_443_U0 6820
+Add Instance matmul_PE_UNROLL8_layer3_512_1_444 matmul_PE_UNROLL8_layer3_512_1_444_U0 6828
+Add Instance matmul_PE_UNROLL8_layer3_512_0_445 matmul_PE_UNROLL8_layer3_512_0_445_U0 6836
+Add Instance matmul_PE_UNROLL8_layer3_512_1_446 matmul_PE_UNROLL8_layer3_512_1_446_U0 6844
+Add Instance matmul_PE_UNROLL8_layer3_512_0_447 matmul_PE_UNROLL8_layer3_512_0_447_U0 6852
+Add Instance matmul_PE_UNROLL8_layer3_512_1_448 matmul_PE_UNROLL8_layer3_512_1_448_U0 6860
+Add Instance matmul_PE_UNROLL8_layer3_512_0_449 matmul_PE_UNROLL8_layer3_512_0_449_U0 6868
+Add Instance matmul_PE_UNROLL8_layer3_512_1_450 matmul_PE_UNROLL8_layer3_512_1_450_U0 6876
+Add Instance matmul_PE_UNROLL8_layer3_512_0_451 matmul_PE_UNROLL8_layer3_512_0_451_U0 6884
+Add Instance matmul_PE_UNROLL8_layer3_512_1_452 matmul_PE_UNROLL8_layer3_512_1_452_U0 6892
+Add Instance matmul_PE_UNROLL8_layer3_512_0_453 matmul_PE_UNROLL8_layer3_512_0_453_U0 6900
+Add Instance matmul_PE_UNROLL8_layer3_512_1_454 matmul_PE_UNROLL8_layer3_512_1_454_U0 6908
+Add Instance matmul_PE_UNROLL8_layer3_512_0_455 matmul_PE_UNROLL8_layer3_512_0_455_U0 6916
+Add Instance matmul_PE_UNROLL8_layer3_512_1_456 matmul_PE_UNROLL8_layer3_512_1_456_U0 6924
+Add Instance matmul_PE_UNROLL8_layer3_512_0_457 matmul_PE_UNROLL8_layer3_512_0_457_U0 6932
+Add Instance matmul_PE_UNROLL8_layer3_512_1_458 matmul_PE_UNROLL8_layer3_512_1_458_U0 6940
+Add Instance matmul_PE_UNROLL8_layer3_512_0_459 matmul_PE_UNROLL8_layer3_512_0_459_U0 6948
+Add Instance matmul_PE_UNROLL8_layer3_512_1_460 matmul_PE_UNROLL8_layer3_512_1_460_U0 6956
+Add Instance matmul_PE_UNROLL8_layer3_512_0_461 matmul_PE_UNROLL8_layer3_512_0_461_U0 6964
+Add Instance matmul_PE_UNROLL8_layer3_512_1_462 matmul_PE_UNROLL8_layer3_512_1_462_U0 6972
+Add Instance matmul_PE_UNROLL8_layer3_512_0_s matmul_PE_UNROLL8_layer3_512_0_U0 6980
+Add Instance matmul_PE_UNROLL8_layer3_512_1_s matmul_PE_UNROLL8_layer3_512_1_U0 6988
+Add Instance dataTransform dataTransform_U0 6996
+Add Instance replicate_feature_in_4 replicate_feature_in_4_U0 7003
+Add Instance listenPorts listenPorts_U0 7013
+Add Instance listenPorts_Loop_1_proc463 listenPorts_Loop_1_proc463_U0 66
+Add Instance listenPorts_Loop_2_proc464 listenPorts_Loop_2_proc464_U0 81
+Add Instance listenPorts_entry720 listenPorts_entry720_U0 94
+Add Instance consumeW consumeW_U0 7035
+Add Instance replicate_feature_512PEs_64PE_512_206 replicate_feature_512PEs_64PE_512_206_U0 7042
+Add Instance replicate_feature_512PEs_64PE_512_207 replicate_feature_512PEs_64PE_512_207_U0 7111
+Add Instance replicate_feature_512PEs_64PE_512_208 replicate_feature_512PEs_64PE_512_208_U0 7180
+Add Instance replicate_feature_512PEs_64PE_512_s replicate_feature_512PEs_64PE_512_U0 7249
+Add Instance tie_off_tcp_open_connection tie_off_tcp_open_connection_U0 7318
+Add Instance tie_off_tcp_close_con tie_off_tcp_close_con_U0 7338
+Add Instance hls_bil_krnl_entry726 hls_bil_krnl_entry726_U0 7350
+Add Instance hls_bil_krnl_entry3 hls_bil_krnl_entry3_U0 7373
+Add Instance initialize_basePort initialize_basePort_U0 7404
+Add Instance Block_codeRepl1_proc Block_codeRepl1_proc_U0 7411
+INFO: [v++ 60-586] Created ./_x.hw.xilinx_u280_xdma_201920_3/hls_bil_krnl.xo
+INFO: [v++ 60-791] Total elapsed time: 0h 47m 20s
+mkdir -p ./_x.hw.xilinx_u280_xdma_201920_3
+/opt/Xilinx/Vivado/2019.2/bin/vivado -mode batch -source scripts/gen_xo.tcl -tclargs ./_x.hw.xilinx_u280_xdma_201920_3/cmac_krnl.xo cmac_krnl hw /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm xilinx_u280_xdma_201920_3 kernel/cmac_krnl/cmac_krnl.xml kernel/cmac_krnl/package_cmac_krnl.tcl
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source scripts/gen_xo.tcl
+# if { $::argc != 7 } {
+#     puts "ERROR: Program \"$::argv0\" requires 6 arguments!\n"
+#     puts "Usage: $::argv0 <xoname> <krnl_name> <target> <xpfm_path> <device> <xml_path> <package_tcl_path>\n"
+#     exit
+# }
+# set xoname  [lindex $::argv 0]
+# set krnl_name [lindex $::argv 1]
+# set target    [lindex $::argv 2]
+# set xpfm_path [lindex $::argv 3]
+# set device    [lindex $::argv 4]
+# set xml_path [lindex $::argv 5]
+# set package_tcl_path [lindex $::argv 6]
+# set suffix "${krnl_name}_${target}_${device}"
+# puts "INFO: ${xoname} ${krnl_name} ${target} ${xpfm_path} ${device}" 
+INFO: ./_x.hw.xilinx_u280_xdma_201920_3/cmac_krnl.xo cmac_krnl hw /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm xilinx_u280_xdma_201920_3
+# source -notrace ${package_tcl_path}
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build/fpga-network-stack/iprepo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.2/data/ip'.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_512' to 'axis_register_slice_512' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_pkg_fifo_512' to 'axis_pkg_fifo_512' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'ethernet_frame_padding_512_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [Device 21-403] Loading part xcu280-fsvh2892-2L-e
+create_ip: Time (s): cpu = 00:00:13 ; elapsed = 00:00:32 . Memory (MB): peak = 2841.191 ; gain = 1240.672 ; free physical = 42560 ; free virtual = 346988
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'cmac_usplus_axis' to 'cmac_usplus_axis' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_data_fifo_cc_udp_data' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_cc_udp_data' to 'axis_data_fifo_cc_udp_data' is not allowed and is ignored.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_cmac_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/ila_cmac/ila_cmac.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/tmp_kernel_pack_cmac_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/ila_0/ila_0.xci'.
+WARNING: [IP_Flow 19-5101] Packaging a component with a SystemVerilog top file is not fully supported. Please refer to UG1118 'Creating and Packaging Custom IP'.
+INFO: [IP_Flow 19-1842] HDL Parser: Found include file "src/network_types.svh" from the top-level HDL file.
+INFO: [IP_Flow 19-1842] HDL Parser: Found include file "src/network_intf.svh" from the top-level HDL file.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axis_net_rx' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axis_net_tx' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axi_control' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'ap_rst_n'.
+WARNING: [IP_Flow 19-3158] Bus Interface 'axis_net_rx': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'axis_net_tx': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axi_control': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3157] Bus Interface 'ap_rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'ap_rst_n' is not *resetn - please double check the POLARITY setting.
+WARNING: [IP_Flow 19-3153] Bus Interface 'ap_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build/fpga-network-stack/iprepo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.2/data/ip'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/packaged_kernel_cmac_krnl_hw_xilinx_u280_xdma_201920_3/src/network_intf.svh:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/packaged_kernel_cmac_krnl_hw_xilinx_u280_xdma_201920_3/src/axis_data_reg.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/packaged_kernel_cmac_krnl_hw_xilinx_u280_xdma_201920_3/src/network_types.svh:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/packaged_kernel_cmac_krnl_hw_xilinx_u280_xdma_201920_3/src/axis_data_reg_array.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/packaged_kernel_cmac_krnl_hw_xilinx_u280_xdma_201920_3/src/cmac_krnl_control_s_axi.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/packaged_kernel_cmac_krnl_hw_xilinx_u280_xdma_201920_3/src/cmac_usplus_axis_wrapper.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/packaged_kernel_cmac_krnl_hw_xilinx_u280_xdma_201920_3/src/network_clk_cross.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/packaged_kernel_cmac_krnl_hw_xilinx_u280_xdma_201920_3/src/network_module.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/packaged_kernel_cmac_krnl_hw_xilinx_u280_xdma_201920_3/src/cmac_krnl.sv:]
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2928.918 ; gain = 7.676 ; free physical = 42386 ; free virtual = 346820
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 's_axi_control'.
+TEMPORARY: Not packaging reference clock as diff clock due to post-System Linker validate error
+# if {[file exists "${xoname}"]} {
+#     file delete -force "${xoname}"
+# }
+# package_xo -xo_path ${xoname} -kernel_name ${krnl_name} -ip_directory ./packaged_kernel_${suffix} -kernel_xml ${xml_path}
+WARNING: [Vivado 12-4404] The CPU emulation flow in v++ is only supported when using a packaged XO file that contains C-model files, none were found.
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 16 17:20:07 2021...
+mkdir -p ./build_dir.hw.xilinx_u280_xdma_201920_3
+/opt/Xilinx/Vitis/2019.2/bin/v++ -t hw --platform /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm --save-temps  --kernel_frequency 157 --advanced.param compiler.userPostSysLinkTcl=/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/scripts/post_sys_link.tcl  --dk chipscope:network_krnl_1:s_axis_tcp_listen_port --dk chipscope:network_krnl_1:m_axis_tcp_port_status --dk chipscope:network_krnl_1:m_axis_tcp_rx_data --dk chipscope:network_krnl_1:m_axis_tcp_notification --dk chipscope:network_krnl_1:s_axis_tcp_read_pkg --config ./kernel/user_krnl/hls_bil_krnl/config_sp_hls_bil_krnl.txt --temp_dir ./build_dir.hw.xilinx_u280_xdma_201920_3 -l  -o'build_dir.hw.xilinx_u280_xdma_201920_3/network.xclbin' _x.hw.xilinx_u280_xdma_201920_3/network_krnl.xo _x.hw.xilinx_u280_xdma_201920_3/hls_bil_krnl.xo _x.hw.xilinx_u280_xdma_201920_3/cmac_krnl.xo
+Option Map File Used: '/opt/Xilinx/Vitis/2019.2/data/vitis/vpp/optMap.xml'
+
+****** v++ v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/reports/link
+	Log files: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/logs/link
+Running Dispatch Server on port:33129
+INFO: [v++ 60-1548] Creating build summary session with primary output /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/network.xclbin.link_summary, at Tue Mar 16 17:20:20 2021
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Tue Mar 16 17:20:20 2021
+Running Rule Check Server on port:34039
+INFO: [v++ 60-1315] Creating rulecheck session with output '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/reports/link/v++_link_network_guidance.html', at Tue Mar 16 17:20:21 2021
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u280_xdma_201920_3/hw/xilinx_u280_xdma_201920_3.xsa'
+INFO: [v++ 60-629] Linking for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u280_xdma_201920_3
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [17:20:40] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/_x.hw.xilinx_u280_xdma_201920_3/network_krnl.xo --xo /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/_x.hw.xilinx_u280_xdma_201920_3/hls_bil_krnl.xo --xo /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/_x.hw.xilinx_u280_xdma_201920_3/cmac_krnl.xo -keep --config /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm --target hw --output_dir /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int --temp_dir /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/run_link
+INFO: [SYSTEM_LINK 82-76] Reading emulation BD and HPFM information
+INFO: [SYSTEM_LINK 60-1316] Initiating connection to rulecheck server, at Tue Mar 16 17:20:45 2021
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/_x.hw.xilinx_u280_xdma_201920_3/network_krnl.xo
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/_x.hw.xilinx_u280_xdma_201920_3/hls_bil_krnl.xo
+INFO: [KernelCheck 83-118] 'hls_bil_krnl' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 's_axis_udp_rx' kernel.xml and component.xml caseness discrepency is being corrected, S_AXIS_UDP_RX is being replaced by s_axis_udp_rx
+INFO: [KernelCheck 83-118] 'm_axis_udp_tx' kernel.xml and component.xml caseness discrepency is being corrected, M_AXIS_UDP_TX is being replaced by m_axis_udp_tx
+INFO: [KernelCheck 83-118] 's_axis_udp_rx_meta' kernel.xml and component.xml caseness discrepency is being corrected, S_AXIS_UDP_RX_META is being replaced by s_axis_udp_rx_meta
+INFO: [KernelCheck 83-118] 'm_axis_udp_tx_meta' kernel.xml and component.xml caseness discrepency is being corrected, M_AXIS_UDP_TX_META is being replaced by m_axis_udp_tx_meta
+INFO: [KernelCheck 83-118] 'm_axis_tcp_listen_port' kernel.xml and component.xml caseness discrepency is being corrected, M_AXIS_TCP_LISTEN_PORT is being replaced by m_axis_tcp_listen_port
+INFO: [KernelCheck 83-118] 's_axis_tcp_port_status' kernel.xml and component.xml caseness discrepency is being corrected, S_AXIS_TCP_PORT_STATUS is being replaced by s_axis_tcp_port_status
+INFO: [KernelCheck 83-118] 'm_axis_tcp_open_connection' kernel.xml and component.xml caseness discrepency is being corrected, M_AXIS_TCP_OPEN_CONNECTION is being replaced by m_axis_tcp_open_connection
+INFO: [KernelCheck 83-118] 's_axis_tcp_open_status' kernel.xml and component.xml caseness discrepency is being corrected, S_AXIS_TCP_OPEN_STATUS is being replaced by s_axis_tcp_open_status
+INFO: [KernelCheck 83-118] 'm_axis_tcp_close_connection' kernel.xml and component.xml caseness discrepency is being corrected, M_AXIS_TCP_CLOSE_CONNECTION is being replaced by m_axis_tcp_close_connection
+INFO: [KernelCheck 83-118] 's_axis_tcp_notification' kernel.xml and component.xml caseness discrepency is being corrected, S_AXIS_TCP_NOTIFICATION is being replaced by s_axis_tcp_notification
+INFO: [KernelCheck 83-118] 'm_axis_tcp_read_pkg' kernel.xml and component.xml caseness discrepency is being corrected, M_AXIS_TCP_READ_PKG is being replaced by m_axis_tcp_read_pkg
+INFO: [KernelCheck 83-118] 's_axis_tcp_rx_meta' kernel.xml and component.xml caseness discrepency is being corrected, S_AXIS_TCP_RX_META is being replaced by s_axis_tcp_rx_meta
+INFO: [KernelCheck 83-118] 's_axis_tcp_rx_data' kernel.xml and component.xml caseness discrepency is being corrected, S_AXIS_TCP_RX_DATA is being replaced by s_axis_tcp_rx_data
+INFO: [KernelCheck 83-118] 'm_axis_tcp_tx_meta' kernel.xml and component.xml caseness discrepency is being corrected, M_AXIS_TCP_TX_META is being replaced by m_axis_tcp_tx_meta
+INFO: [KernelCheck 83-118] 'm_axis_tcp_tx_data' kernel.xml and component.xml caseness discrepency is being corrected, M_AXIS_TCP_TX_DATA is being replaced by m_axis_tcp_tx_data
+INFO: [KernelCheck 83-118] 's_axis_tcp_tx_status' kernel.xml and component.xml caseness discrepency is being corrected, S_AXIS_TCP_TX_STATUS is being replaced by s_axis_tcp_tx_status
+INFO: [KernelCheck 83-118] 'useConn_recv' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'basePort_recv_1' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'expectedRxPkgCnt_1' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'basePort_recv_2' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'expectedRxPkgCnt_2' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'useConn_send' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'pkgWordCount_send' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'basePort_send' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'expectedTxPkgCnt' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'baseIpAddress_send' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'index' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/_x.hw.xilinx_u280_xdma_201920_3/cmac_krnl.xo
+INFO: [SYSTEM_LINK 82-53] Creating IP database /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [17:20:59] build_xd_ip_db started: /opt/Xilinx/Vitis/2019.2/bin/build_xd_ip_db -ip_search 0  -sds-pf /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link/xilinx_u280_xdma_201920_3.hpfm -clkid 0 -ip /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link/iprepo/ethz_ch_kernel_network_krnl_1_0,network_krnl -ip /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link/iprepo/ethz_ch_kernel_cmac_krnl_1_0,cmac_krnl -ip /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link/iprepo/xilinx_com_hls_hls_bil_krnl_1_0,hls_bil_krnl -o /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [17:21:05] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 295.461 ; gain = 0.000 ; free physical = 43431 ; free virtual = 348290
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [17:21:05] cfgen started: /opt/Xilinx/Vitis/2019.2/bin/cfgen  -sc network_krnl_1.m_axis_udp_rx:hls_bil_krnl_1.s_axis_udp_rx -sc network_krnl_1.m_axis_udp_rx_meta:hls_bil_krnl_1.s_axis_udp_rx_meta -sc network_krnl_1.m_axis_tcp_port_status:hls_bil_krnl_1.s_axis_tcp_port_status -sc network_krnl_1.m_axis_tcp_open_status:hls_bil_krnl_1.s_axis_tcp_open_status -sc network_krnl_1.m_axis_tcp_notification:hls_bil_krnl_1.s_axis_tcp_notification -sc network_krnl_1.m_axis_tcp_rx_meta:hls_bil_krnl_1.s_axis_tcp_rx_meta -sc network_krnl_1.m_axis_tcp_rx_data:hls_bil_krnl_1.s_axis_tcp_rx_data -sc network_krnl_1.m_axis_tcp_tx_status:hls_bil_krnl_1.s_axis_tcp_tx_status -sc hls_bil_krnl_1.m_axis_udp_tx:network_krnl_1.s_axis_udp_tx -sc hls_bil_krnl_1.m_axis_udp_tx_meta:network_krnl_1.s_axis_udp_tx_meta -sc hls_bil_krnl_1.m_axis_tcp_listen_port:network_krnl_1.s_axis_tcp_listen_port -sc hls_bil_krnl_1.m_axis_tcp_open_connection:network_krnl_1.s_axis_tcp_open_connection -sc hls_bil_krnl_1.m_axis_tcp_close_connection:network_krnl_1.s_axis_tcp_close_connection -sc hls_bil_krnl_1.m_axis_tcp_read_pkg:network_krnl_1.s_axis_tcp_read_pkg -sc hls_bil_krnl_1.m_axis_tcp_tx_meta:network_krnl_1.s_axis_tcp_tx_meta -sc hls_bil_krnl_1.m_axis_tcp_tx_data:network_krnl_1.s_axis_tcp_tx_data -sc cmac_krnl_1.axis_net_rx:network_krnl_1.axis_net_rx -sc network_krnl_1.axis_net_tx:cmac_krnl_1.axis_net_tx -slr cmac_krnl_1:SLR2 -sp network_krnl_1.m00_axi:HBM[28] -sp network_krnl_1.m01_axi:HBM[29] -dmclkid 0 -r /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: cmac_krnl, num: 1  {cmac_krnl_1}
+INFO: [CFGEN 83-0]   kernel: hls_bil_krnl, num: 1  {hls_bil_krnl_1}
+INFO: [CFGEN 83-0]   kernel: network_krnl, num: 1  {network_krnl_1}
+INFO: [CFGEN 83-0] Port Specs: 
+INFO: [CFGEN 83-0]   kernel: network_krnl_1, k_port: m00_axi, sptag: HBM[28]
+INFO: [CFGEN 83-0]   kernel: network_krnl_1, k_port: m01_axi, sptag: HBM[29]
+INFO: [CFGEN 83-0] Stream Specs: 
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_udp_rx => hls_bil_krnl_1.s_axis_udp_rx
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_udp_rx_meta => hls_bil_krnl_1.s_axis_udp_rx_meta
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_tcp_port_status => hls_bil_krnl_1.s_axis_tcp_port_status
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_tcp_open_status => hls_bil_krnl_1.s_axis_tcp_open_status
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_tcp_notification => hls_bil_krnl_1.s_axis_tcp_notification
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_tcp_rx_meta => hls_bil_krnl_1.s_axis_tcp_rx_meta
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_tcp_rx_data => hls_bil_krnl_1.s_axis_tcp_rx_data
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_tcp_tx_status => hls_bil_krnl_1.s_axis_tcp_tx_status
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_udp_tx => network_krnl_1.s_axis_udp_tx
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_udp_tx_meta => network_krnl_1.s_axis_udp_tx_meta
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_tcp_listen_port => network_krnl_1.s_axis_tcp_listen_port
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_tcp_open_connection => network_krnl_1.s_axis_tcp_open_connection
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_tcp_close_connection => network_krnl_1.s_axis_tcp_close_connection
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_tcp_read_pkg => network_krnl_1.s_axis_tcp_read_pkg
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_tcp_tx_meta => network_krnl_1.s_axis_tcp_tx_meta
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_tcp_tx_data => network_krnl_1.s_axis_tcp_tx_data
+INFO: [CFGEN 83-0]   cmac_krnl_1.axis_net_rx => network_krnl_1.axis_net_rx
+INFO: [CFGEN 83-0]   network_krnl_1.axis_net_tx => cmac_krnl_1.axis_net_tx
+INFO: [CFGEN 83-0] SLR Specs: 
+INFO: [CFGEN 83-0]   instance: cmac_krnl_1, SLR: SLR2
+INFO: [CFGEN 83-2228] Creating mapping for argument network_krnl_1.axi00_ptr0 to HBM[28] for directive network_krnl_1.m00_axi:HBM[28]
+INFO: [CFGEN 83-2228] Creating mapping for argument network_krnl_1.axi01_ptr0 to HBM[29] for directive network_krnl_1.m01_axi:HBM[29]
+INFO: [SYSTEM_LINK 82-37] [17:21:11] cfgen finished successfully
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 295.461 ; gain = 0.000 ; free physical = 43455 ; free virtual = 348292
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [17:21:11] cf2bd started: /opt/Xilinx/Vitis/2019.2/bin/cf2bd  --linux --trace_buffer 1024 --input_file /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link/_sysl/.xsd --temp_dir /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link --output_dir /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int --target_bd pfm_dynamic.bd
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -bd pfm_dynamic.bd -dn dr -dp /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [17:21:14] cf2bd finished successfully
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 295.461 ; gain = 0.000 ; free physical = 43419 ; free virtual = 348253
+INFO: [v++ 60-1441] [17:21:14] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:34 . Memory (MB): peak = 683.305 ; gain = 0.000 ; free physical = 43431 ; free virtual = 348265
+INFO: [v++ 60-1443] [17:21:14] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/sdsl.dat -rtd /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/cf2sw.rtd -xclbin /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/xclbin_orig.xml -o /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/run_link
+INFO: [v++ 60-1441] [17:21:17] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 683.305 ; gain = 0.000 ; free physical = 43451 ; free virtual = 348293
+INFO: [v++ 60-1443] [17:21:17] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram --rtdJsonFileName /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/cf2sw.rtd --diagramJsonFileName /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/systemDiagramModel.json --platformFilePath /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm --generatedByName v++ --generatedByVersion 2019.2 --generatedByChangeList 2708876 --generatedByTimeStamp Wed Nov  6 21:39:14 MST 2019 --generatedByOptions /opt/Xilinx/Vitis/2019.2/bin/unwrapped/lnx64.o/v++ -t hw --platform /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm --save-temps --kernel_frequency 157 --advanced.param compiler.userPostSysLinkTcl=/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/scripts/post_sys_link.tcl --dk chipscope:network_krnl_1:s_axis_tcp_listen_port --dk chipscope:network_krnl_1:m_axis_tcp_port_status --dk chipscope:network_krnl_1:m_axis_tcp_rx_data --dk chipscope:network_krnl_1:m_axis_tcp_notification --dk chipscope:network_krnl_1:s_axis_tcp_read_pkg --config ./kernel/user_krnl/hls_bil_krnl/config_sp_hls_bil_krnl.txt --temp_dir ./build_dir.hw.xilinx_u280_xdma_201920_3 -l -obuild_dir.hw.xilinx_u280_xdma_201920_3/network.xclbin _x.hw.xilinx_u280_xdma_201920_3/network_krnl.xo _x.hw.xilinx_u280_xdma_201920_3/hls_bil_krnl.xo _x.hw.xilinx_u280_xdma_201920_3/cmac_krnl.xo  --generatedByXclbinName network --kernelInfoDataFileName /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/kernel_info.dat
+INFO: [v++ 60-1454] Run Directory: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/run_link
+INFO: [v++ 60-839] Read in kernel information from file '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/kernel_info.dat'.
+WARNING: [v++ 82-214] Could not generate kernel estimated resources because /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/xo/cmac_krnl/cmac_krnl/cmac_krnl.design.xml does not exist.
+WARNING: [v++ 82-157] Unable to populate kernel available resources BRAM entry.
+WARNING: [v++ 82-158] Unable to populate kernel available resources DSP entry.
+WARNING: [v++ 82-214] Could not generate kernel estimated resources because /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/xo/network_krnl/network_krnl/network_krnl.design.xml does not exist.
+INFO: [v++ 60-1441] [17:21:19] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 683.305 ; gain = 0.000 ; free physical = 43445 ; free virtual = 348287
+INFO: [v++ 60-1443] [17:21:19] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw -f /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm --dk chipscope:network_krnl_1:s_axis_tcp_listen_port --dk chipscope:network_krnl_1:m_axis_tcp_port_status --dk chipscope:network_krnl_1:m_axis_tcp_rx_data --dk chipscope:network_krnl_1:m_axis_tcp_notification --dk chipscope:network_krnl_1:s_axis_tcp_read_pkg --kernel_frequency 157 -s --output_dir /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int --log_dir /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/logs/link --report_dir /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/reports/link --config /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/vplConfig.ini -k /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link --no-info --tlog_dir /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/.tlog/v++_link_network --iprepo /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/xo/ip_repo/ethz_ch_kernel_cmac_krnl_1_0 --iprepo /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/xo/ip_repo/xilinx_com_hls_hls_bil_krnl_1_0 --iprepo /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/xo/ip_repo/ethz_ch_kernel_network_krnl_1_0 --messageDb /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/run_link/vpl.pb /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/run_link
+
+****** vpl v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/kernel_info.dat'.
+INFO: [VPL 60-423]   Target device: xilinx_u280_xdma_201920_3
+INFO: [VPL 60-1032] Extracting hardware platform to /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_4_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/vivado/vpl/.local/hw_platform
+[17:22:27] Run vpl: Step create_project: Started
+Creating Vivado project.
+[17:22:30] Run vpl: Step create_project: Completed
+[17:22:30] Run vpl: Step create_bd: Started
+[17:24:11] Run vpl: Step create_bd: RUNNING...
+[17:25:45] Run vpl: Step create_bd: RUNNING...
+[17:25:43] Run vpl: Step create_bd: Completed
+[17:25:43] Run vpl: Step update_bd: Started
+[17:27:17] Run vpl: Step update_bd: RUNNING...
+[17:28:52] Run vpl: Step update_bd: RUNNING...
+[17:29:05] Run vpl: Step update_bd: Completed
+[17:29:05] Run vpl: Step generate_target: Started
+[17:30:35] Run vpl: Step generate_target: RUNNING...
+[17:32:07] Run vpl: Step generate_target: RUNNING...
+[17:32:16] Run vpl: Step generate_target: Completed
+[17:32:16] Run vpl: Step config_hw_runs: Started
+[17:32:44] Run vpl: Step config_hw_runs: Completed
+[17:32:44] Run vpl: Step synth: Started
+[17:33:29] Block-level synthesis in progress, 0 of 16 jobs complete, 7 jobs running.
+[17:34:08] Block-level synthesis in progress, 0 of 16 jobs complete, 8 jobs running.
+[17:34:48] Block-level synthesis in progress, 0 of 16 jobs complete, 8 jobs running.
+[17:35:27] Block-level synthesis in progress, 0 of 16 jobs complete, 8 jobs running.
+[17:36:09] Block-level synthesis in progress, 3 of 16 jobs complete, 7 jobs running.
+[17:36:49] Block-level synthesis in progress, 6 of 16 jobs complete, 7 jobs running.
+[17:37:32] Block-level synthesis in progress, 6 of 16 jobs complete, 7 jobs running.
+[17:38:14] Block-level synthesis in progress, 7 of 16 jobs complete, 7 jobs running.
+[17:39:03] Block-level synthesis in progress, 10 of 16 jobs complete, 5 jobs running.
+[17:39:47] Block-level synthesis in progress, 11 of 16 jobs complete, 5 jobs running.
+[17:40:38] Block-level synthesis in progress, 13 of 16 jobs complete, 3 jobs running.
+[17:41:17] Block-level synthesis in progress, 13 of 16 jobs complete, 3 jobs running.
+[17:42:09] Block-level synthesis in progress, 14 of 16 jobs complete, 2 jobs running.
+[17:42:48] Block-level synthesis in progress, 14 of 16 jobs complete, 2 jobs running.
+[17:43:39] Block-level synthesis in progress, 14 of 16 jobs complete, 2 jobs running.
+[17:44:18] Block-level synthesis in progress, 14 of 16 jobs complete, 2 jobs running.
+[17:45:09] Block-level synthesis in progress, 14 of 16 jobs complete, 2 jobs running.
+[17:45:47] Block-level synthesis in progress, 14 of 16 jobs complete, 2 jobs running.
+[17:46:38] Block-level synthesis in progress, 14 of 16 jobs complete, 2 jobs running.
+[17:48:12] Block-level synthesis in progress, 14 of 16 jobs complete, 2 jobs running.
+[17:48:53] Block-level synthesis in progress, 14 of 16 jobs complete, 2 jobs running.
+[17:49:49] Block-level synthesis in progress, 14 of 16 jobs complete, 2 jobs running.
+[17:50:42] Block-level synthesis in progress, 14 of 16 jobs complete, 2 jobs running.
+[17:51:22] Block-level synthesis in progress, 14 of 16 jobs complete, 2 jobs running.
+[17:52:19] Block-level synthesis in progress, 14 of 16 jobs complete, 2 jobs running.
+[17:53:12] Block-level synthesis in progress, 14 of 16 jobs complete, 2 jobs running.
+[17:53:52] Block-level synthesis in progress, 14 of 16 jobs complete, 2 jobs running.
+[17:54:50] Block-level synthesis in progress, 14 of 16 jobs complete, 2 jobs running.
+[17:55:44] Block-level synthesis in progress, 14 of 16 jobs complete, 2 jobs running.
+[17:56:25] Block-level synthesis in progress, 14 of 16 jobs complete, 2 jobs running.
+[17:57:23] Block-level synthesis in progress, 14 of 16 jobs complete, 2 jobs running.
+[17:58:19] Block-level synthesis in progress, 14 of 16 jobs complete, 2 jobs running.
+[17:58:55] Block-level synthesis in progress, 14 of 16 jobs complete, 2 jobs running.
+[17:59:52] Block-level synthesis in progress, 14 of 16 jobs complete, 2 jobs running.
+[18:00:48] Block-level synthesis in progress, 14 of 16 jobs complete, 2 jobs running.
+[18:01:24] Block-level synthesis in progress, 14 of 16 jobs complete, 2 jobs running.
+[18:02:23] Block-level synthesis in progress, 14 of 16 jobs complete, 2 jobs running.
+[18:03:04] Block-level synthesis in progress, 14 of 16 jobs complete, 2 jobs running.
+[18:03:58] Block-level synthesis in progress, 15 of 16 jobs complete, 1 job running.
+[18:04:53] Block-level synthesis in progress, 15 of 16 jobs complete, 1 job running.
+[18:05:33] Block-level synthesis in progress, 15 of 16 jobs complete, 1 job running.
+[18:06:28] Block-level synthesis in progress, 15 of 16 jobs complete, 1 job running.
+[18:07:23] Block-level synthesis in progress, 15 of 16 jobs complete, 1 job running.
+[18:08:04] Block-level synthesis in progress, 15 of 16 jobs complete, 1 job running.
+[18:08:59] Block-level synthesis in progress, 15 of 16 jobs complete, 1 job running.
+[18:09:56] Block-level synthesis in progress, 15 of 16 jobs complete, 1 job running.
+[18:10:37] Block-level synthesis in progress, 16 of 16 jobs complete, 0 jobs running.
+[18:11:28] Block-level synthesis in progress, 16 of 16 jobs complete, 0 jobs running.
+[18:12:18] Top-level synthesis in progress.
+[18:13:00] Top-level synthesis in progress.
+[18:13:59] Run vpl: Step synth: Completed
+[18:13:59] Run vpl: Step impl: Started
+[18:30:34] Finished 2nd of 6 tasks (FPGA linking synthesized kernels to platform). Elapsed time: 01h 09m 13s 
+
+[18:30:34] Starting logic optimization..
+[18:30:34] Phase 1 Generate And Synthesize Debug Cores
+[18:34:07] Phase 2 Retarget
+[18:34:55] Phase 3 Constant propagation
+[18:35:33] Phase 4 Sweep
+[18:38:25] Phase 5 BUFG optimization
+[18:39:12] Phase 6 Shift Register Optimization
+[18:39:12] Phase 7 Post Processing Netlist
+[18:40:38] Finished 3rd of 6 tasks (FPGA logic optimization). Elapsed time: 00h 10m 04s 
+
+[18:40:38] Starting logic placement..
+[18:42:04] Phase 1 Placer Initialization
+[18:42:04] Phase 1.1 Placer Initialization Netlist Sorting
+[18:44:56] Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+[18:47:48] Phase 1.3 Build Placer Netlist Model
+[18:52:12] Phase 1.4 Constrain Clocks/Macros
+[18:52:51] Phase 2 Global Placement
+[18:52:51] Phase 2.1 Floorplanning
+[19:02:30] Phase 2.2 Global Placement Core
+[19:19:26] Phase 2.2.1 Physical Synthesis In Placer
+[19:24:40] Phase 3 Detail Placement
+[19:24:40] Phase 3.1 Commit Multi Column Macros
+[19:25:19] Phase 3.2 Commit Most Macros & LUTRAMs
+[19:26:07] Phase 3.3 Area Swap Optimization
+[19:26:47] Phase 3.4 Pipeline Register Optimization
+[19:26:47] Phase 3.5 IO Cut Optimizer
+[19:27:36] Phase 3.6 Fast Optimization
+[19:28:15] Phase 3.7 Small Shape DP
+[19:28:15] Phase 3.7.1 Small Shape Clustering
+[19:29:43] Phase 3.7.2 Flow Legalize Slice Clusters
+[19:29:43] Phase 3.7.3 Slice Area Swap
+[19:31:10] Phase 3.7.4 Commit Slice Clusters
+[19:32:39] Phase 3.8 Place Remaining
+[19:32:39] Phase 3.9 Re-assign LUT pins
+[19:34:08] Phase 3.10 Pipeline Register Optimization
+[19:34:08] Phase 3.11 Fast Optimization
+[19:36:29] Phase 4 Post Placement Optimization and Clean-Up
+[19:36:29] Phase 4.1 Post Commit Optimization
+[19:38:36] Phase 4.1.1 Post Placement Optimization
+[19:39:26] Phase 4.1.1.1 BUFG Insertion
+[19:41:02] Phase 4.1.1.2 BUFG Replication
+[19:43:12] Phase 4.1.1.3 Replication
+[19:43:12] Phase 4.2 Post Placement Cleanup
+[19:45:21] Phase 4.3 Placer Reporting
+[19:45:21] Phase 4.4 Final Placement Cleanup
+[19:55:18] Finished 4th of 6 tasks (FPGA logic placement). Elapsed time: 01h 14m 39s 
+
+[19:55:18] Starting logic routing..
+[19:56:49] Phase 1 Build RT Design
+[20:01:21] Phase 2 Router Initialization
+[20:01:21] Phase 2.1 Fix Topology Constraints
+[20:02:07] Phase 2.2 Pre Route Cleanup
+[20:02:52] Phase 2.3 Global Clock Net Routing
+[20:03:38] Phase 2.4 Update Timing
+Makefile:124: recipe for target 'build_dir.hw.xilinx_u280_xdma_201920_3/network.xclbin' failed

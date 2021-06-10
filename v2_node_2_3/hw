@@ -1,0 +1,287 @@
+$DEVICE is [/opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm]
+$POSTSYSLINKTCL is [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/scripts/post_sys_link.tcl]
+g++ -I.//common/includes/xcl2 -I/opt/xilinx/xrt/include -I/opt/Xilinx/Vivado/2019.2/include -Wall -O0 -g -std=gnu++14 -DVITIS_PLATFORM=/opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm -fmessage-length=0 .//common/includes/xcl2/xcl2.cpp host/hls_bil_krnl/host.cpp  -o 'host/host'  -L/opt/xilinx/xrt/lib -lOpenCL -lpthread  -lrt -lstdc++
+mkdir -p ./_x.hw.xilinx_u280_xdma_201920_3
+/opt/Xilinx/Vivado/2019.2/bin/vivado -mode batch -source scripts/gen_xo.tcl -tclargs ./_x.hw.xilinx_u280_xdma_201920_3/network_krnl.xo network_krnl hw /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm xilinx_u280_xdma_201920_3 kernel/network_krnl/network_krnl.xml kernel/network_krnl/package_network_krnl.tcl
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source scripts/gen_xo.tcl
+# if { $::argc != 7 } {
+#     puts "ERROR: Program \"$::argv0\" requires 6 arguments!\n"
+#     puts "Usage: $::argv0 <xoname> <krnl_name> <target> <xpfm_path> <device> <xml_path> <package_tcl_path>\n"
+#     exit
+# }
+# set xoname  [lindex $::argv 0]
+# set krnl_name [lindex $::argv 1]
+# set target    [lindex $::argv 2]
+# set xpfm_path [lindex $::argv 3]
+# set device    [lindex $::argv 4]
+# set xml_path [lindex $::argv 5]
+# set package_tcl_path [lindex $::argv 6]
+# set suffix "${krnl_name}_${target}_${device}"
+# puts "INFO: ${xoname} ${krnl_name} ${target} ${xpfm_path} ${device}" 
+INFO: ./_x.hw.xilinx_u280_xdma_201920_3/network_krnl.xo network_krnl hw /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm xilinx_u280_xdma_201920_3
+# source -notrace ${package_tcl_path}
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/build/fpga-network-stack/iprepo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.2/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'net_axis_register_slice_64' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_32_d1024' to 'axis_data_fifo_32_d1024' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_64_d1024' to 'axis_data_fifo_64_d1024' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_32_d256' to 'axis_data_fifo_32_d256' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_64_d256' to 'axis_data_fifo_64_d256' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_128_d1024' to 'axis_data_fifo_128_d1024' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_256_d1024' to 'axis_data_fifo_256_d1024' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_512_d1024' to 'axis_data_fifo_512_d1024' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_interconnect_merger_256' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_interconnect_merger_256' to 'axis_interconnect_merger_256' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_interconnect_128_2to1' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_interconnect_128_4to1' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_interconnect_256_2to1' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_interconnect_256_4to1' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_interconnect_512_2to1' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_interconnect_512_4to1' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_64_to_512_converter' to 'axis_64_to_512_converter' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_512_to_64_converter' to 'axis_512_to_64_converter' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_128_to_512_converter' to 'axis_128_to_512_converter' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_512_to_128_converter' to 'axis_512_to_128_converter' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_256_to_512_converter' to 'axis_256_to_512_converter' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_512_to_256_converter' to 'axis_512_to_256_converter' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_64_to_128_converter' to 'axis_64_to_128_converter' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_128_to_64_converter' to 'axis_128_to_64_converter' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_64_to_256_converter' to 'axis_64_to_256_converter' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_256_to_64_converter' to 'axis_256to_64_converter' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_data_fifo_cc_udp_meta' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_cc_udp_meta' to 'axis_data_fifo_cc_udp_meta' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_data_fifo_cc_udp_data' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_cc_udp_data' to 'axis_data_fifo_cc_udp_data' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_cc_512' to 'axis_data_fifo_cc_512' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_cc_256' to 'axis_data_fifo_cc_256' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_cc_128' to 'axis_data_fifo_cc_128' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_cc_64' to 'axis_data_fifo_cc_64' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_cc_32' to 'axis_data_fifo_cc_32' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_cc_16' to 'axis_data_fifo_cc_16' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_cc_8' to 'axis_data_fifo_cc_8' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ila_network_controller' to 'ila_network_controller' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ila_tasi' to 'ila_tasi' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ila_eventMerger' to 'ila_eventMerger' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ila_eventEngine' to 'ila_eventEngine' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ila_handler' to 'ila_handler' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ila_network_top_perf' to 'ila_network_top_perf' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ila_listen_port_table' to 'ila_listen_port_table' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ila_rx_app_if' to 'ila_rx_app_if' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axi_datamover_mem' to 'axi_datamover_mem' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axi_datamover_mem_unaligned' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axi_datamover_mem_unaligned' to 'axi_datamover_mem_unaligned' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_clock_converter_32' to 'axis_clock_converter_32' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_clock_converter_64' to 'axis_clock_converter_64' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_clock_converter_96' to 'axis_clock_converter_96' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_clock_converter_136' to 'axis_clock_converter_136' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_clock_converter_144' to 'axis_clock_converter_144' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_clock_converter_200' to 'axis_clock_converter_200' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axil_clock_converter' to 'axil_clock_converter' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axil_net_ctrl_clock_converter' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axil_net_ctrl_clock_converter' to 'axil_net_ctrl_clock_converter' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axil_controller_crossbar' to 'axil_controller_crossbar' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_8' to 'axis_register_slice_8' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_16' to 'axis_register_slice_16' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_24' to 'axis_register_slice_24' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_32' to 'axis_register_slice_32' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_48' to 'axis_register_slice_48' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_88' to 'axis_register_slice_88' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_96' to 'axis_register_slice_96' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_176' to 'axis_register_slice_176' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_64' to 'axis_register_slice_64' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_128' to 'axis_register_slice_128' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_256' to 'axis_register_slice_256' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_512' to 'axis_register_slice_512' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_96' to 'axis_data_fifo_96' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_160' to 'axis_data_fifo_160' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_160_cc' to 'axis_data_fifo_160_cc' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_512_cc' to 'axis_data_fifo_512_cc' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'fifo_generator_rdma_cmd' to 'fifo_generator_rdma_cmd' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'fifo_generator_rdma_data' to 'fifo_generator_rdma_data' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axi_register_slice' to 'axi_register_slice' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_interconnect_96_1to2' to 'axis_interconnect_96_1to2' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_interconnect_160_2to1' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_interconnect_160_2to1' to 'axis_interconnect_160_2to1' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_interconnect_64_1to2' to 'axis_interconnect_64_1to2' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_interconnect_512_1to2' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_interconnect_512_1to2' to 'axis_interconnect_512_1to2' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_register_slice_meta_56_0' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_meta_56_0' to 'axis_register_slice_meta_56_0' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_register_slice_meta_32_0' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_meta_32_0' to 'axis_register_slice_meta_32_0' is not allowed and is ignored.
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'Full_Flags_Reset_Value' from '0' to '1' has been ignored for IP 'axis_sync_fifo'
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_pkg_fifo_512' to 'axis_pkg_fifo_512' is not allowed and is ignored.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/net_axis_register_slice_64/net_axis_register_slice_64.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_data_fifo_32_d1024/axis_data_fifo_32_d1024.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_interconnect_merger_256/axis_interconnect_merger_256.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_interconnect_2to1/axis_interconnect_2to1.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_interconnect_3to1/axis_interconnect_3to1.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_interconnect_4to1/axis_interconnect_4to1.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_interconnect_128_2to1/axis_interconnect_128_2to1.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_interconnect_128_4to1/axis_interconnect_128_4to1.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_interconnect_256_2to1/axis_interconnect_256_2to1.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_interconnect_256_4to1/axis_interconnect_256_4to1.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_64_to_128_converter/axis_64_to_128_converter.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_128_to_64_converter/axis_128_to_64_converter.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_64_to_256_converter/axis_64_to_256_converter.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_256_to_64_converter/axis_256_to_64_converter.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/dhcp_client_ip/dhcp_client_ip.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_data_fifo_cc_udp_meta/axis_data_fifo_cc_udp_meta.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_data_fifo_cc_udp_data/axis_data_fifo_cc_udp_data.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_data_fifo_cc_512/axis_data_fifo_cc_512.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_data_fifo_cc_256/axis_data_fifo_cc_256.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_data_fifo_cc_128/axis_data_fifo_cc_128.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_data_fifo_cc_64/axis_data_fifo_cc_64.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_data_fifo_cc_32/axis_data_fifo_cc_32.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_data_fifo_cc_16/axis_data_fifo_cc_16.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_data_fifo_cc_8/axis_data_fifo_cc_8.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/ila_mem_inf/ila_mem_inf.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/ila_network_top/ila_network_top.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/ila_network_top2/ila_network_top2.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/ila_network_controller/ila_network_controller.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/ila_tasi/ila_tasi.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/ila_eventMerger/ila_eventMerger.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/ila_eventEngine/ila_eventEngine.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/ila_handler/ila_handler.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/ila_listen_port_table/ila_listen_port_table.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/ila_rx_app_if/ila_rx_app_if.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_clock_converter_32/axis_clock_converter_32.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_clock_converter_64/axis_clock_converter_64.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_clock_converter_96/axis_clock_converter_96.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_clock_converter_136/axis_clock_converter_136.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_clock_converter_144/axis_clock_converter_144.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_clock_converter_200/axis_clock_converter_200.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axil_clock_converter/axil_clock_converter.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axil_net_ctrl_clock_converter/axil_net_ctrl_clock_converter.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axil_controller_crossbar/axil_controller_crossbar.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_register_slice_96/axis_register_slice_96.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_register_slice_64/axis_register_slice_64.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_register_slice_256/axis_register_slice_256.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_data_fifo_96/axis_data_fifo_96.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_data_fifo_160/axis_data_fifo_160.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_data_fifo_160_cc/axis_data_fifo_160_cc.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/fifo_generator_rdma_cmd/fifo_generator_rdma_cmd.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/fifo_generator_rdma_data/fifo_generator_rdma_data.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axi_register_slice/axi_register_slice.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_interconnect_96_1to2/axis_interconnect_96_1to2.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_interconnect_160_2to1/axis_interconnect_160_2to1.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_interconnect_64_1to2/axis_interconnect_64_1to2.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_interconnect_512_1to2/axis_interconnect_512_1to2.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_sync_fifo/axis_sync_fifo.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/cmd_fifo_xgemac_rxif/cmd_fifo_xgemac_rxif.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/cmd_fifo_xgemac_txif/cmd_fifo_xgemac_txif.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/tmp_kernel_pack_network_krnl_hw_xilinx_u280_xdma_201920_3/kernel_pack.srcs/sources_1/ip/axis_pkg_fifo_512/axis_pkg_fifo_512.xci'.
+WARNING: [IP_Flow 19-5101] Packaging a component with a SystemVerilog top file is not fully supported. Please refer to UG1118 'Creating and Packaging Custom IP'.
+INFO: [IP_Flow 19-1842] HDL Parser: Found include file "src/network_types.svh" from the top-level HDL file.
+INFO: [IP_Flow 19-1842] HDL Parser: Found include file "src/network_intf.svh" from the top-level HDL file.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axis_net_rx' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axis_net_tx' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_tcp_notification' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_tcp_open_status' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_tcp_port_status' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_tcp_rx_data' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_tcp_rx_meta' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_tcp_tx_status' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_udp_rx' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_udp_rx_meta' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_tcp_close_connection' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_tcp_listen_port' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_tcp_open_connection' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_tcp_read_pkg' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_tcp_tx_data' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_tcp_tx_meta' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_udp_tx' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_udp_tx_meta' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm00_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm01_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axi_control' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'interrupt' of definition 'xilinx.com:signal:interrupt:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'interrupt': Added interface parameter 'SENSITIVITY' with value 'LEVEL_HIGH'.
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'ap_rst_n'.
+WARNING: [IP_Flow 19-3507] File Group 'xilinx_anylanguagesynthesis (Synthesis)': The referenced subcore 'xilinx.com:ip:axis_interconnect:1.1' is not the latest version in the IP catalog. The latest version is 'xilinx.com:ip:axis_interconnect:2.1'.
+WARNING: [IP_Flow 19-3507] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': The referenced subcore 'xilinx.com:ip:axis_interconnect:1.1' is not the latest version in the IP catalog. The latest version is 'xilinx.com:ip:axis_interconnect:2.1'.
+WARNING: [IP_Flow 19-3507] File Group 'xilinx_implementation (Implementation)': The referenced subcore 'xilinx.com:ip:axis_interconnect:1.1' is not the latest version in the IP catalog. The latest version is 'xilinx.com:ip:axis_interconnect:2.1'.
+WARNING: [IP_Flow 19-3158] Bus Interface 'axis_net_rx': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'axis_net_tx': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_tcp_notification': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_tcp_open_status': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_tcp_port_status': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_tcp_rx_data': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_tcp_rx_meta': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_tcp_tx_status': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_udp_rx': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_udp_rx_meta': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_tcp_close_connection': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_tcp_listen_port': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_tcp_open_connection': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_tcp_read_pkg': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_tcp_tx_data': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_tcp_tx_meta': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_udp_tx': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_udp_tx_meta': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm00_axi': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm01_axi': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axi_control': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3157] Bus Interface 'ap_rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'ap_rst_n' is not *resetn - please double check the POLARITY setting.
+WARNING: [IP_Flow 19-3153] Bus Interface 'ap_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/build/fpga-network-stack/iprepo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.2/data/ip'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/packaged_kernel_network_krnl_hw_xilinx_u280_xdma_201920_3/src/network_intf.svh:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/packaged_kernel_network_krnl_hw_xilinx_u280_xdma_201920_3/src/axis_data_reg.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/packaged_kernel_network_krnl_hw_xilinx_u280_xdma_201920_3/src/network_types.svh:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/packaged_kernel_network_krnl_hw_xilinx_u280_xdma_201920_3/src/axis_data_reg_array.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/packaged_kernel_network_krnl_hw_xilinx_u280_xdma_201920_3/src/axis_meta_reg.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/packaged_kernel_network_krnl_hw_xilinx_u280_xdma_201920_3/src/axis_udp_meta_reg.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/packaged_kernel_network_krnl_hw_xilinx_u280_xdma_201920_3/src/mem_single_inf.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/packaged_kernel_network_krnl_hw_xilinx_u280_xdma_201920_3/src/network_control_s_axi.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/packaged_kernel_network_krnl_hw_xilinx_u280_xdma_201920_3/src/network_stack.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/packaged_kernel_network_krnl_hw_xilinx_u280_xdma_201920_3/src/network_top.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/packaged_kernel_network_krnl_hw_xilinx_u280_xdma_201920_3/src/tcp_stack.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/packaged_kernel_network_krnl_hw_xilinx_u280_xdma_201920_3/src/udp_stack.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/packaged_kernel_network_krnl_hw_xilinx_u280_xdma_201920_3/src/network_krnl.sv:]
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2904.254 ; gain = 0.000 ; free physical = 61976 ; free virtual = 372495
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 's_axi_control'.
+# if {[file exists "${xoname}"]} {
+#     file delete -force "${xoname}"
+# }
+# package_xo -xo_path ${xoname} -kernel_name ${krnl_name} -ip_directory ./packaged_kernel_${suffix} -kernel_xml ${xml_path}
+WARNING: [Vivado 12-4404] The CPU emulation flow in v++ is only supported when using a packaged XO file that contains C-model files, none were found.
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 16 16:31:38 2021...
+mkdir -p ./_x.hw.xilinx_u280_xdma_201920_3
+/opt/Xilinx/Vitis/2019.2/bin/v++ -t hw --platform /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm --save-temps  --kernel_frequency 135 --advanced.param compiler.userPostSysLinkTcl=/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/scripts/post_sys_link.tcl  --dk chipscope:network_krnl_1:s_axis_tcp_open_connection --dk chipscope:network_krnl_1:m_axis_tcp_open_status --dk chipscope:network_krnl_1:s_axis_tcp_tx_data --dk chipscope:network_krnl_1:s_axis_tcp_tx_meta --dk chipscope:network_krnl_1:s_axis_tcp_listen_port --dk chipscope:network_krnl_1:m_axis_tcp_port_status --dk chipscope:network_krnl_1:m_axis_tcp_rx_data --dk chipscope:network_krnl_1:m_axis_tcp_notification --dk chipscope:network_krnl_1:s_axis_tcp_read_pkg --dk chipscope:network_krnl_1:m_axis_tcp_rx_meta --dk chipscope:network_krnl_1:m_axis_tcp_tx_status --config ./kernel/user_krnl/hls_bil_krnl/config_sp_hls_bil_krnl.txt -c -k hls_bil_krnl -o ./_x.hw.xilinx_u280_xdma_201920_3/hls_bil_krnl.xo --input_files kernel/user_krnl/hls_bil_krnl/src/hls/*.cpp
+Option Map File Used: '/opt/Xilinx/Vitis/2019.2/data/vitis/vpp/optMap.xml'
+
+****** v++ v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/_x/reports/hls_bil_krnl
+	Log files: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/_x/logs/hls_bil_krnl
+Running Dispatch Server on port:39205
+INFO: [v++ 60-1548] Creating build summary session with primary output /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/_x.hw.xilinx_u280_xdma_201920_3/hls_bil_krnl.xo.compile_summary, at Tue Mar 16 16:40:04 2021
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Tue Mar 16 16:40:04 2021
+Running Rule Check Server on port:33217
+INFO: [v++ 60-1315] Creating rulecheck session with output '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_2_3/_x/reports/hls_bil_krnl/v++_compile_hls_bil_krnl_guidance.html', at Tue Mar 16 16:40:05 2021
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u280_xdma_201920_3/hw/xilinx_u280_xdma_201920_3.xsa'
+INFO: [v++ 60-585] Compiling for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u280_xdma_201920_3
+INFO: [v++ 60-242] Creating kernel: 'hls_bil_krnl'
+INFO: [v++ 60-1616] Creating a HLS clock using kernel_frequency option: 135 MHz
+config_hls.mk:7: recipe for target '_x.hw.xilinx_u280_xdma_201920_3/hls_bil_krnl.xo' failed

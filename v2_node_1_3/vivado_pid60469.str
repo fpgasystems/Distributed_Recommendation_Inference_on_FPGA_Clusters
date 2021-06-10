@@ -1,0 +1,244 @@
+/*
+
+Xilinx Vivado v2019.2 (64-bit) [Major: 2019, Minor: 2]
+SW Build: 2708876 on Wed Nov  6 21:39:14 MST 2019
+IP Build: 2700528 on Thu Nov  7 00:09:20 MST 2019
+
+Process ID (PID): 60469
+License: Customer
+
+Current time: 	Mon Mar 08 11:19:57 CET 2021
+Time zone: 	Central European Standard Time (Europe/Zurich)
+
+OS: Ubuntu
+OS Version: 4.14.156-U
+OS Architecture: amd64
+Available processors (cores): 80
+
+Display: localhost:10.0
+Screen size: 1920x1080
+Screen resolution (DPI): 104
+Available screens: 1
+Available disk space: 23 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	/opt/Xilinx/Vivado/2019.2/tps/lnx64/jre9.0.4
+Java executable location: 	/opt/Xilinx/Vivado/2019.2/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	yuzhuyu
+User home directory: /home/yuzhuyu
+User working directory: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_1
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /opt/Xilinx/Vivado
+HDI_APPROOT: /opt/Xilinx/Vivado/2019.2
+RDI_DATADIR: /opt/Xilinx/Vivado/2019.2/data
+RDI_BINDIR: /opt/Xilinx/Vivado/2019.2/bin
+
+Vivado preferences file location: /home/yuzhuyu/.Xilinx/Vivado/2019.2/vivado.xml
+Vivado preferences directory: /home/yuzhuyu/.Xilinx/Vivado/2019.2/
+Vivado layouts directory: /home/yuzhuyu/.Xilinx/Vivado/2019.2/layouts
+PlanAhead jar file location: 	/opt/Xilinx/Vivado/2019.2/lib/classes/planAhead.jar
+Vivado log file location: 	/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_1/vivado.log
+Vivado journal file location: 	/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_1/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-60469-alveo0
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /opt/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINXD_LICENSE_FILE: /opt/Xilinx/Xilinx.lic
+XILINX_DSP: /opt/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_PLANAHEAD: /opt/Xilinx/Vivado/2019.2
+XILINX_SDK: /opt/Xilinx/Vitis/2019.2
+XILINX_VITIS: /opt/Xilinx/Vitis/2019.2
+XILINX_VIVADO: /opt/Xilinx/Vivado/2019.2
+XILINX_VIVADO_HLS: /opt/Xilinx/Vivado/2019.2
+XILINX_XRT: /opt/xilinx/xrt
+
+
+GUI allocated memory:	201 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,171 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// WARNING: HEventQueue.dispatchEvent() is taking  3598 ms.
+// TclEventType: PROJECT_OPEN_DIALOG
+// WARNING: HTimer (HSTRUtils Dump STR Log Timer) is taking 3580ms to process. Increasing delay to 4000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3585 ms.
+// TclEventType: PROJECT_OPEN_DIALOG
+// HMemoryUtils.trashcanNow. Engine heap size: 1,134 MB. GUI used memory: 47 MB. Current time: 3/8/21, 11:20:01 AM CET
+// [GUI Memory]: 79 MB (+80690kb) [00:00:16]
+// [Engine Memory]: 1,144 MB (+1047747kb) [00:00:16]
+// Opening Vivado Project: ./build_dir.hw.xilinx_u280_xdma_201920_3/link/vivado/vpl/prj/prj.xpr. Version: Vivado v2019.2 
+// bB (cr):  Open Project : addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  5105 ms.
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// WARNING: HEventQueue.dispatchEvent() is taking  4007 ms.
+// TclEventType: PR_PARTITION_RM_NEW
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// Tcl Message: open_project ./build_dir.hw.xilinx_u280_xdma_201920_3/link/vivado/vpl/prj/prj.xpr 
+// WARNING: HEventQueue.dispatchEvent() is taking  2194 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,359 MB. GUI used memory: 48 MB. Current time: 3/8/21, 11:20:23 AM CET
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,424 MB. GUI used memory: 48 MB. Current time: 3/8/21, 11:20:43 AM CET
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,545 MB. GUI used memory: 48 MB. Current time: 3/8/21, 11:20:58 AM CET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 105 MB (+22882kb) [00:01:30]
+// [Engine Memory]: 1,716 MB (+539867kb) [00:01:30]
+// [GUI Memory]: 188 MB (+80948kb) [00:01:32]
+// [Engine Memory]: 1,865 MB (+66974kb) [00:01:32]
+// [GUI Memory]: 198 MB (+628kb) [00:01:32]
+// [GUI Memory]: 209 MB (+1774kb) [00:01:33]
+// [GUI Memory]: 220 MB (+434kb) [00:01:33]
+// [Engine Memory]: 2,174 MB (+225833kb) [00:01:33]
+// [Engine Memory]: 2,290 MB (+7181kb) [00:01:33]
+// WARNING: HEventQueue.dispatchEvent() is taking  4570 ms.
+// Tcl Message: open_project ./build_dir.hw.xilinx_u280_xdma_201920_3/link/vivado/vpl/prj/prj.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,368 MB. GUI used memory: 146 MB. Current time: 3/8/21, 11:21:19 AM CET
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1139 ms. Increasing delay to 3000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3219 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3562 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  4238 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1519 ms.
+// Tcl Message: open_project: Time (s): cpu = 00:01:13 ; elapsed = 00:01:12 . Memory (MB): peak = 7587.781 ; gain = 861.457 ; free physical = 301777 ; free virtual = 451486 
+// [Engine Memory]: 4,896 MB (+2612719kb) [00:01:47]
+// Project name: prj; location: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_1/build_dir.hw.xilinx_u280_xdma_201920_3/link/vivado/vpl/prj; part: xcu280-fsvh2892-2L-e
+// WARNING: HEventQueue.dispatchEvent() is taking  1657 ms.
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 3551ms to process. Increasing delay to 3000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3551 ms.
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 5079 ms. Increasing delay to 15237 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3564 ms.
+dismissDialog("Open Project"); // bB (cr)
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 359ms to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,547 MB. GUI used memory: 169 MB. Current time: 3/8/21, 11:21:42 AM CET
+// bB (cr):  Update Design Hierarchy : addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1162 ms.
+dismissDialog("Update Design Hierarchy"); // bB (cr)
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 2597ms to process. Increasing delay to 4000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2597 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3710 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 408 ms. Decreasing delay to 2408 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1248 ms. Increasing delay to 3744 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1888 ms. Increasing delay to 5664 ms.
+// [GUI Memory]: 232 MB (+639kb) [00:09:51]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,526 MB. GUI used memory: 175 MB. Current time: 3/8/21, 11:51:43 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 2,526 MB. GUI used memory: 171 MB. Current time: 3/8/21, 12:21:43 PM CET
+// WARNING: HEventQueue.dispatchEvent() is taking  1584 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,526 MB. GUI used memory: 171 MB. Current time: 3/8/21, 12:51:45 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 2,526 MB. GUI used memory: 171 MB. Current time: 3/8/21, 1:21:45 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 2,526 MB. GUI used memory: 172 MB. Current time: 3/8/21, 1:51:45 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 2,526 MB. GUI used memory: 172 MB. Current time: 3/8/21, 2:21:45 PM CET

@@ -1,0 +1,4 @@
+for i in range(50):
+	print("        reg",str(i),".range(31, 0) = s_result_PE",str(4*i),".read() + 1;",sep='')
+	print("        reg",str(i),".range(31, 0) = s_result_PE",str(4*i),".read() + 1;",sep='')
+print("        reg",str(i),".range(31, 0) = s_result_PE",str(4*i),".read() + 1;",sep='')

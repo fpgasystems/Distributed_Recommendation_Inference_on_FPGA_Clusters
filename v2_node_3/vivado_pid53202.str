@@ -1,0 +1,553 @@
+/*
+
+Xilinx Vivado v2019.2 (64-bit) [Major: 2019, Minor: 2]
+SW Build: 2708876 on Wed Nov  6 21:39:14 MST 2019
+IP Build: 2700528 on Thu Nov  7 00:09:20 MST 2019
+
+Process ID (PID): 53202
+License: Customer
+
+Current time: 	Thu Mar 04 09:41:45 CET 2021
+Time zone: 	Central European Standard Time (Europe/Zurich)
+
+OS: Ubuntu
+OS Version: 4.14.156-U
+OS Architecture: amd64
+Available processors (cores): 80
+
+Display: localhost:10.0
+Screen size: 1920x1080
+Screen resolution (DPI): 104
+Available screens: 1
+Available disk space: 23 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	/opt/Xilinx/Vivado/2019.2/tps/lnx64/jre9.0.4
+Java executable location: 	/opt/Xilinx/Vivado/2019.2/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	yuzhuyu
+User home directory: /home/yuzhuyu
+User working directory: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_3
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /opt/Xilinx/Vivado
+HDI_APPROOT: /opt/Xilinx/Vivado/2019.2
+RDI_DATADIR: /opt/Xilinx/Vivado/2019.2/data
+RDI_BINDIR: /opt/Xilinx/Vivado/2019.2/bin
+
+Vivado preferences file location: /home/yuzhuyu/.Xilinx/Vivado/2019.2/vivado.xml
+Vivado preferences directory: /home/yuzhuyu/.Xilinx/Vivado/2019.2/
+Vivado layouts directory: /home/yuzhuyu/.Xilinx/Vivado/2019.2/layouts
+PlanAhead jar file location: 	/opt/Xilinx/Vivado/2019.2/lib/classes/planAhead.jar
+Vivado log file location: 	/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_3/vivado.log
+Vivado journal file location: 	/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_3/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-53202-alveo0
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /opt/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINXD_LICENSE_FILE: /opt/Xilinx/Xilinx.lic
+XILINX_DSP: /opt/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_PLANAHEAD: /opt/Xilinx/Vivado/2019.2
+XILINX_SDK: /opt/Xilinx/Vitis/2019.2
+XILINX_VITIS: /opt/Xilinx/Vitis/2019.2
+XILINX_VIVADO: /opt/Xilinx/Vivado/2019.2
+XILINX_VIVADO_HLS: /opt/Xilinx/Vivado/2019.2
+XILINX_XRT: /opt/xilinx/xrt
+
+
+GUI allocated memory:	212 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,186 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// WARNING: HEventQueue.dispatchEvent() is taking  3251 ms.
+// TclEventType: PROJECT_OPEN_DIALOG
+// WARNING: HTimer (HSTRUtils Dump STR Log Timer) is taking 3195ms to process. Increasing delay to 4000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3198 ms.
+// TclEventType: PROJECT_OPEN_DIALOG
+// HMemoryUtils.trashcanNow. Engine heap size: 1,197 MB. GUI used memory: 63 MB. Current time: 3/4/21, 9:41:49 AM CET
+// [GUI Memory]: 94 MB (+96539kb) [00:00:14]
+// [Engine Memory]: 1,198 MB (+1104484kb) [00:00:14]
+// Opening Vivado Project: ./build_dir.hw.xilinx_u280_xdma_201920_3/link/vivado/vpl/prj/prj.xpr. Version: Vivado v2019.2 
+// bB (cr):  Open Project : addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  4593 ms.
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  3318 ms.
+// Tcl Message: open_project ./build_dir.hw.xilinx_u280_xdma_201920_3/link/vivado/vpl/prj/prj.xpr 
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PR_PARTITION_RM_NEW
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// WARNING: HEventQueue.dispatchEvent() is taking  1756 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,358 MB. GUI used memory: 48 MB. Current time: 3/4/21, 9:42:11 AM CET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 135 MB (+37217kb) [00:01:05]
+// [Engine Memory]: 1,561 MB (+318054kb) [00:01:05]
+// [GUI Memory]: 193 MB (+54475kb) [00:01:06]
+// [GUI Memory]: 214 MB (+11855kb) [00:01:06]
+// [Engine Memory]: 1,662 MB (+23767kb) [00:01:06]
+// [Engine Memory]: 1,753 MB (+8004kb) [00:01:07]
+// WARNING: HEventQueue.dispatchEvent() is taking  4036 ms.
+// Tcl Message: open_project ./build_dir.hw.xilinx_u280_xdma_201920_3/link/vivado/vpl/prj/prj.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,854 MB. GUI used memory: 158 MB. Current time: 3/4/21, 9:42:43 AM CET
+// WARNING: HEventQueue.dispatchEvent() is taking  2137 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2875 ms.
+// [Engine Memory]: 1,856 MB (+16886kb) [00:01:14]
+// [Engine Memory]: 2,049 MB (+104360kb) [00:01:14]
+// WARNING: HEventQueue.dispatchEvent() is taking  1760 ms.
+// Tcl Message: open_project: Time (s): cpu = 00:00:50 ; elapsed = 00:00:49 . Memory (MB): peak = 7310.621 ; gain = 585.582 ; free physical = 228251 ; free virtual = 447800 
+// WARNING: HEventQueue.dispatchEvent() is taking  2058 ms.
+// Project name: prj; location: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/v2_node_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/vivado/vpl/prj; part: xcu280-fsvh2892-2L-e
+// [Engine Memory]: 3,573 MB (+1491023kb) [00:01:18]
+dismissDialog("Open Project"); // bB (cr)
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 2695ms to process. Increasing delay to 3000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2695 ms.
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 2464 ms. Increasing delay to 7392 ms.
+// bB (cr):  Update Design Hierarchy : addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  4630 ms.
+dismissDialog("Update Design Hierarchy"); // bB (cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,261 MB. GUI used memory: 173 MB. Current time: 3/4/21, 9:43:02 AM CET
+// WARNING: HEventQueue.dispatchEvent() is taking  3082 ms.
+// [GUI Memory]: 231 MB (+5732kb) [00:03:40]
+// WARNING: HEventQueue.dispatchEvent() is taking  3789 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1098 ms.
+// Elapsed time: 1260 seconds
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design]", 11); // u (O, cr)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design]", 11); // u (O, cr)
+// WARNING: HEventQueue.dispatchEvent() is taking  5595 ms.
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design, Report Utilization]", 19, false); // u (O, cr)
+// bB (cr):  Open Implemented Design : addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1489 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3579 ms.
+// Tcl Message: open_run impl_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 3,741 MB. GUI used memory: 174 MB. Current time: 3/4/21, 10:05:27 AM CET
+// [Engine Memory]: 3,971 MB (+229998kb) [00:23:58]
+// HMemoryUtils.trashcanNow. Engine heap size: 4,211 MB. GUI used memory: 173 MB. Current time: 3/4/21, 10:05:47 AM CET
+// [Engine Memory]: 4,518 MB (+365233kb) [00:24:27]
+// HMemoryUtils.trashcanNow. Engine heap size: 4,623 MB. GUI used memory: 173 MB. Current time: 3/4/21, 10:06:07 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 5,000 MB. GUI used memory: 173 MB. Current time: 3/4/21, 10:06:27 AM CET
+// [Engine Memory]: 5,076 MB (+347857kb) [00:24:56]
+// HMemoryUtils.trashcanNow. Engine heap size: 5,398 MB. GUI used memory: 173 MB. Current time: 3/4/21, 10:06:47 AM CET
+// [Engine Memory]: 5,674 MB (+361471kb) [00:25:25]
+// HMemoryUtils.trashcanNow. Engine heap size: 5,704 MB. GUI used memory: 173 MB. Current time: 3/4/21, 10:07:02 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 5,940 MB. GUI used memory: 173 MB. Current time: 3/4/21, 10:07:22 AM CET
+// [Engine Memory]: 6,007 MB (+51350kb) [00:25:54]
+// HMemoryUtils.trashcanNow. Engine heap size: 6,212 MB. GUI used memory: 173 MB. Current time: 3/4/21, 10:07:37 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 6,862 MB. GUI used memory: 173 MB. Current time: 3/4/21, 10:07:57 AM CET
+// [Engine Memory]: 6,897 MB (+618537kb) [00:26:23]
+// HMemoryUtils.trashcanNow. Engine heap size: 7,395 MB. GUI used memory: 173 MB. Current time: 3/4/21, 10:08:17 AM CET
+// [Engine Memory]: 7,750 MB (+532229kb) [00:26:52]
+// HMemoryUtils.trashcanNow. Engine heap size: 8,432 MB. GUI used memory: 173 MB. Current time: 3/4/21, 10:08:37 AM CET
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// [Engine Memory]: 8,692 MB (+581769kb) [00:27:21]
+// HMemoryUtils.trashcanNow. Engine heap size: 8,692 MB. GUI used memory: 173 MB. Current time: 3/4/21, 10:08:57 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 14,110 MB. GUI used memory: 173 MB. Current time: 3/4/21, 10:09:12 AM CET
+// [Engine Memory]: 14,270 MB (+5393407kb) [00:27:50]
+// HMemoryUtils.trashcanNow. Engine heap size: 14,462 MB. GUI used memory: 173 MB. Current time: 3/4/21, 10:09:32 AM CET
+// TclEventType: PHY_BLOCK_NEW
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: PHY_BLOCK_ADD_INST
+// TclEventType: SIGNAL_INTERFACE_ADD
+// TclEventType: SIGNAL_HIERARCHY_CHANGED
+// TclEventType: SIGNAL_INTERFACE_ADD
+// TclEventType: SIGNAL_HIERARCHY_CHANGED
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: PHY_BLOCK_ADD_INST
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: PHY_BLOCK_ADD_INST
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: PHY_BLOCK_MODIFY
+// HMemoryUtils.trashcanNow. Engine heap size: 15,270 MB. GUI used memory: 173 MB. Current time: 3/4/21, 10:10:37 AM CET
+// [Engine Memory]: 15,621 MB (+668095kb) [00:29:14]
+// HMemoryUtils.trashcanNow. Engine heap size: 15,861 MB. GUI used memory: 173 MB. Current time: 3/4/21, 10:10:57 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 16,309 MB. GUI used memory: 173 MB. Current time: 3/4/21, 10:11:12 AM CET
+// [Engine Memory]: 16,461 MB (+61819kb) [00:29:43]
+// HMemoryUtils.trashcanNow. Engine heap size: 16,959 MB. GUI used memory: 173 MB. Current time: 3/4/21, 10:11:37 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 17,241 MB. GUI used memory: 173 MB. Current time: 3/4/21, 10:11:52 AM CET
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 17,246 MB. GUI used memory: 174 MB. Current time: 3/4/21, 10:12:36 AM CET
+// [GUI Memory]: 250 MB (+8753kb) [00:31:04]
+// [GUI Memory]: 263 MB (+122kb) [00:31:04]
+// TclEventType: DESIGN_NEW
+// [GUI Memory]: 339 MB (+65456kb) [00:31:06]
+// [Engine Memory]: 17,517 MB (+244328kb) [00:31:06]
+// Xgd.load filename: /opt/Xilinx/Vivado/2019.2/data/parts/xilinx/virtexuplusHBM/devint/virtexuplusHBM/xcu280/xcu280.xgd; ZipEntry: xcu280_detail.xgd elapsed time: 1.9s
+// [GUI Memory]: 357 MB (+1181kb) [00:31:07]
+// Device: addNotify
+// DeviceView Instantiated
+// WARNING: HEventQueue.dispatchEvent() is taking  3787 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Device 21-403] Loading part xcu280-fsvh2892-2L-e 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 11150.891 ; gain = 89.203 ; free physical = 223177 ; free virtual = 440724 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 41134 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 38 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2019.2 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Constraints 18-4422] SNAPPING_MODE is set so implementation will use the DERIVED_RANGES which may be different then the GRID_RANGES. INFO: [Constraints 18-4421] A LAGUNA range, without usable sites, was added to DERIVED_RANGES for purposes of keeping the Programmable Unit together within the reconfigurable pblock. INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:01:33 ; elapsed = 00:01:29 . Memory (MB): peak = 22375.324 ; gain = 2712.641 ; free physical = 212756 ; free virtual = 431266 
+// Tcl Message: Restored from archive | CPU: 97.170000 secs | Memory: 1968.406082 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:01:34 ; elapsed = 00:01:30 . Memory (MB): peak = 22375.324 ; gain = 2712.641 ; free physical = 212734 ; free virtual = 431245 Netlist sorting complete. Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.18 . Memory (MB): peak = 22375.324 ; gain = 0.000 ; free physical = 214017 ; free virtual = 432945 
+// WARNING: HEventQueue.dispatchEvent() is taking  2627 ms.
+// Tcl Message: open_run: Time (s): cpu = 00:08:11 ; elapsed = 00:08:32 . Memory (MB): peak = 22406.336 ; gain = 14390.996 ; free physical = 213132 ; free virtual = 432117 
+// ExpRunCommands.openImplResults elapsed time: 517.5s
+// Device view-level: 0.0
+// TclEventType: TIMING_SUMMARY_UPDATED
+// WARNING: HEventQueue.dispatchEvent() is taking  3156 ms.
+// TclEventType: TIMING_SUMMARY_UPDATED
+// [GUI Memory]: 382 MB (+8057kb) [00:31:17]
+// [GUI Memory]: 405 MB (+3225kb) [00:31:21]
+// [GUI Memory]: 439 MB (+14931kb) [00:31:21]
+// WARNING: HEventQueue.dispatchEvent() is taking  5288 ms.
+// OpenDesignTask elapsed time: 526s
+// HMemoryUtils.trashcanNow. Engine heap size: 17,768 MB. GUI used memory: 365 MB. Current time: 3/4/21, 10:12:57 AM CET
+// Run Command: PAResourceCommand.PACommandNames_RESOURCE_UTILIZATION
+// a (cr): Report Utilization: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  4989 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 18,023 MB. GUI used memory: 362 MB. Current time: 3/4/21, 10:13:12 AM CET
+// Elapsed time: 543 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (a)
+// 'cr' command handler elapsed time: 14 seconds
+// WARNING: HEventQueue.dispatchEvent() is taking  1038 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  4137 ms.
+dismissDialog("Report Utilization"); // a (cr)
+// Tcl Message: report_utilization -name utilization_1 
+// bB (cr):  Report Utilization : addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  4041 ms.
+// [Engine Memory]: 18,593 MB (+210484kb) [00:31:48]
+// WARNING: HEventQueue.dispatchEvent() is taking  3394 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 18,916 MB. GUI used memory: 362 MB. Current time: 3/4/21, 10:13:28 AM CET
+// WARNING: HEventQueue.dispatchEvent() is taking  1123 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 19,552 MB. GUI used memory: 362 MB. Current time: 3/4/21, 10:13:47 AM CET
+// RouteApi::initDelayMediator elapsed time: 60.7s
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// [Engine Memory]: 20,244 MB (+756257kb) [00:32:24]
+// HMemoryUtils.trashcanNow. Engine heap size: 20,563 MB. GUI used memory: 362 MB. Current time: 3/4/21, 10:14:02 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 22,689 MB. GUI used memory: 363 MB. Current time: 3/4/21, 10:14:37 AM CET
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgd elapsed time: 128s
+// Device view-level: 0.0
+// [Engine Memory]: 23,171 MB (+2007238kb) [00:33:12]
+// WARNING: HEventQueue.dispatchEvent() is taking  1320 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 23,538 MB. GUI used memory: 364 MB. Current time: 3/4/21, 10:14:57 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 23,983 MB. GUI used memory: 363 MB. Current time: 3/4/21, 10:15:17 AM CET
+// TclEventType: UTILIZATION_RESULT_GENERATED
+// [GUI Memory]: 462 MB (+768kb) [00:34:19]
+// [GUI Memory]: 486 MB (+1418kb) [00:34:19]
+// [GUI Memory]: 511 MB (+31kb) [00:34:20]
+// [Engine Memory]: 24,964 MB (+665577kb) [00:34:21]
+// [GUI Memory]: 537 MB (+1032kb) [00:34:21]
+// HMemoryUtils.trashcanNow. Engine heap size: 24,566 MB. GUI used memory: 439 MB. Current time: 3/4/21, 10:15:58 AM CET
+// [GUI Memory]: 565 MB (+1009kb) [00:34:25]
+// [GUI Memory]: 594 MB (+1009kb) [00:34:26]
+// [GUI Memory]: 625 MB (+1053kb) [00:34:27]
+// [GUI Memory]: 657 MB (+787kb) [00:34:29]
+// [GUI Memory]: 690 MB (+44kb) [00:34:33]
+// WARNING: HEventQueue.dispatchEvent() is taking  1114 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 24,825 MB. GUI used memory: 513 MB. Current time: 3/4/21, 10:16:13 AM CET
+// [GUI Memory]: 725 MB (+125kb) [00:34:57]
+// [GUI Memory]: 761 MB (+284kb) [00:34:58]
+// [GUI Memory]: 800 MB (+663kb) [00:34:58]
+// [GUI Memory]: 840 MB (+178kb) [00:34:59]
+// HMemoryUtils.trashcanNow. Engine heap size: 25,111 MB. GUI used memory: 595 MB. Current time: 3/4/21, 10:16:39 AM CET
+// WARNING: HEventQueue.dispatchEvent() is taking  5585 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1372 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3230 ms.
+// Tcl Message: report_utilization: Time (s): cpu = 00:14:51 ; elapsed = 00:03:25 . Memory (MB): peak = 28765.117 ; gain = 5985.188 ; free physical = 202570 ; free virtual = 423195 
+// WARNING: HEventQueue.dispatchEvent() is taking  3261 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3239 ms.
+// Elapsed time: 212 seconds
+dismissDialog("Report Utilization"); // bB (cr)
+// WARNING: HEventQueue.dispatchEvent() is taking  1092 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1053 ms.

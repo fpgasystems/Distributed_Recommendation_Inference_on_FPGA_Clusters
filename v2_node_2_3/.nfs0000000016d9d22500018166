@@ -1,0 +1,135 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/reports/link
+	Log files: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/logs/link
+INFO: [v++ 60-1548] Creating build summary session with primary output /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/network.xclbin.link_summary, at Tue Dec 29 16:27:15 2020
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Tue Dec 29 16:27:15 2020
+INFO: [v++ 60-1315] Creating rulecheck session with output '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/reports/link/v++_link_network_guidance.html', at Tue Dec 29 16:27:17 2020
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u280_xdma_201920_3/hw/xilinx_u280_xdma_201920_3.xsa'
+INFO: [v++ 60-629] Linking for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u280_xdma_201920_3
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [16:27:30] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/_x.hw.xilinx_u280_xdma_201920_3/network_krnl.xo --xo /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/_x.hw.xilinx_u280_xdma_201920_3/hls_bil_krnl.xo --xo /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/_x.hw.xilinx_u280_xdma_201920_3/cmac_krnl.xo -keep --config /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm --target hw --output_dir /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int --temp_dir /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/run_link
+INFO: [SYSTEM_LINK 82-76] Reading emulation BD and HPFM information
+INFO: [SYSTEM_LINK 60-1316] Initiating connection to rulecheck server, at Tue Dec 29 16:27:36 2020
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/_x.hw.xilinx_u280_xdma_201920_3/network_krnl.xo
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/_x.hw.xilinx_u280_xdma_201920_3/hls_bil_krnl.xo
+INFO: [KernelCheck 83-118] 'hls_bil_krnl' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 's_axis_udp_rx' kernel.xml and component.xml caseness discrepency is being corrected, S_AXIS_UDP_RX is being replaced by s_axis_udp_rx
+INFO: [KernelCheck 83-118] 'm_axis_udp_tx' kernel.xml and component.xml caseness discrepency is being corrected, M_AXIS_UDP_TX is being replaced by m_axis_udp_tx
+INFO: [KernelCheck 83-118] 's_axis_udp_rx_meta' kernel.xml and component.xml caseness discrepency is being corrected, S_AXIS_UDP_RX_META is being replaced by s_axis_udp_rx_meta
+INFO: [KernelCheck 83-118] 'm_axis_udp_tx_meta' kernel.xml and component.xml caseness discrepency is being corrected, M_AXIS_UDP_TX_META is being replaced by m_axis_udp_tx_meta
+INFO: [KernelCheck 83-118] 'm_axis_tcp_listen_port' kernel.xml and component.xml caseness discrepency is being corrected, M_AXIS_TCP_LISTEN_PORT is being replaced by m_axis_tcp_listen_port
+INFO: [KernelCheck 83-118] 's_axis_tcp_port_status' kernel.xml and component.xml caseness discrepency is being corrected, S_AXIS_TCP_PORT_STATUS is being replaced by s_axis_tcp_port_status
+INFO: [KernelCheck 83-118] 'm_axis_tcp_open_connection' kernel.xml and component.xml caseness discrepency is being corrected, M_AXIS_TCP_OPEN_CONNECTION is being replaced by m_axis_tcp_open_connection
+INFO: [KernelCheck 83-118] 's_axis_tcp_open_status' kernel.xml and component.xml caseness discrepency is being corrected, S_AXIS_TCP_OPEN_STATUS is being replaced by s_axis_tcp_open_status
+INFO: [KernelCheck 83-118] 'm_axis_tcp_close_connection' kernel.xml and component.xml caseness discrepency is being corrected, M_AXIS_TCP_CLOSE_CONNECTION is being replaced by m_axis_tcp_close_connection
+INFO: [KernelCheck 83-118] 's_axis_tcp_notification' kernel.xml and component.xml caseness discrepency is being corrected, S_AXIS_TCP_NOTIFICATION is being replaced by s_axis_tcp_notification
+INFO: [KernelCheck 83-118] 'm_axis_tcp_read_pkg' kernel.xml and component.xml caseness discrepency is being corrected, M_AXIS_TCP_READ_PKG is being replaced by m_axis_tcp_read_pkg
+INFO: [KernelCheck 83-118] 's_axis_tcp_rx_meta' kernel.xml and component.xml caseness discrepency is being corrected, S_AXIS_TCP_RX_META is being replaced by s_axis_tcp_rx_meta
+INFO: [KernelCheck 83-118] 's_axis_tcp_rx_data' kernel.xml and component.xml caseness discrepency is being corrected, S_AXIS_TCP_RX_DATA is being replaced by s_axis_tcp_rx_data
+INFO: [KernelCheck 83-118] 'm_axis_tcp_tx_meta' kernel.xml and component.xml caseness discrepency is being corrected, M_AXIS_TCP_TX_META is being replaced by m_axis_tcp_tx_meta
+INFO: [KernelCheck 83-118] 'm_axis_tcp_tx_data' kernel.xml and component.xml caseness discrepency is being corrected, M_AXIS_TCP_TX_DATA is being replaced by m_axis_tcp_tx_data
+INFO: [KernelCheck 83-118] 's_axis_tcp_tx_status' kernel.xml and component.xml caseness discrepency is being corrected, S_AXIS_TCP_TX_STATUS is being replaced by s_axis_tcp_tx_status
+INFO: [KernelCheck 83-118] 'useConn_recv' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'basePort_recv' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'expectedRxPkgCnt' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'useConn_send' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'pkgWordCount_send' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'basePort_send' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'expectedTxPkgCnt' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'baseIpAddress_send' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/_x.hw.xilinx_u280_xdma_201920_3/cmac_krnl.xo
+INFO: [SYSTEM_LINK 82-53] Creating IP database /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [16:27:41] build_xd_ip_db started: /opt/Xilinx/Vitis/2019.2/bin/build_xd_ip_db -ip_search 0  -sds-pf /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link/xilinx_u280_xdma_201920_3.hpfm -clkid 0 -ip /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link/iprepo/ethz_ch_kernel_network_krnl_1_0,network_krnl -ip /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link/iprepo/xilinx_com_hls_hls_bil_krnl_1_0,hls_bil_krnl -ip /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link/iprepo/ethz_ch_kernel_cmac_krnl_1_0,cmac_krnl -o /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [16:27:48] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 295.461 ; gain = 0.000 ; free physical = 64731 ; free virtual = 410693
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [16:27:48] cfgen started: /opt/Xilinx/Vitis/2019.2/bin/cfgen  -sc network_krnl_1.m_axis_udp_rx:hls_bil_krnl_1.s_axis_udp_rx -sc network_krnl_1.m_axis_udp_rx_meta:hls_bil_krnl_1.s_axis_udp_rx_meta -sc network_krnl_1.m_axis_tcp_port_status:hls_bil_krnl_1.s_axis_tcp_port_status -sc network_krnl_1.m_axis_tcp_open_status:hls_bil_krnl_1.s_axis_tcp_open_status -sc network_krnl_1.m_axis_tcp_notification:hls_bil_krnl_1.s_axis_tcp_notification -sc network_krnl_1.m_axis_tcp_rx_meta:hls_bil_krnl_1.s_axis_tcp_rx_meta -sc network_krnl_1.m_axis_tcp_rx_data:hls_bil_krnl_1.s_axis_tcp_rx_data -sc network_krnl_1.m_axis_tcp_tx_status:hls_bil_krnl_1.s_axis_tcp_tx_status -sc hls_bil_krnl_1.m_axis_udp_tx:network_krnl_1.s_axis_udp_tx -sc hls_bil_krnl_1.m_axis_udp_tx_meta:network_krnl_1.s_axis_udp_tx_meta -sc hls_bil_krnl_1.m_axis_tcp_listen_port:network_krnl_1.s_axis_tcp_listen_port -sc hls_bil_krnl_1.m_axis_tcp_open_connection:network_krnl_1.s_axis_tcp_open_connection -sc hls_bil_krnl_1.m_axis_tcp_close_connection:network_krnl_1.s_axis_tcp_close_connection -sc hls_bil_krnl_1.m_axis_tcp_read_pkg:network_krnl_1.s_axis_tcp_read_pkg -sc hls_bil_krnl_1.m_axis_tcp_tx_meta:network_krnl_1.s_axis_tcp_tx_meta -sc hls_bil_krnl_1.m_axis_tcp_tx_data:network_krnl_1.s_axis_tcp_tx_data -sc cmac_krnl_1.axis_net_rx:network_krnl_1.axis_net_rx -sc network_krnl_1.axis_net_tx:cmac_krnl_1.axis_net_tx -sp network_krnl_1.m00_axi:HBM[30] -sp network_krnl_1.m01_axi:HBM[31] -dmclkid 0 -r /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: cmac_krnl, num: 1  {cmac_krnl_1}
+INFO: [CFGEN 83-0]   kernel: hls_bil_krnl, num: 1  {hls_bil_krnl_1}
+INFO: [CFGEN 83-0]   kernel: network_krnl, num: 1  {network_krnl_1}
+INFO: [CFGEN 83-0] Port Specs: 
+INFO: [CFGEN 83-0]   kernel: network_krnl_1, k_port: m00_axi, sptag: HBM[30]
+INFO: [CFGEN 83-0]   kernel: network_krnl_1, k_port: m01_axi, sptag: HBM[31]
+INFO: [CFGEN 83-0] Stream Specs: 
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_udp_rx => hls_bil_krnl_1.s_axis_udp_rx
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_udp_rx_meta => hls_bil_krnl_1.s_axis_udp_rx_meta
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_tcp_port_status => hls_bil_krnl_1.s_axis_tcp_port_status
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_tcp_open_status => hls_bil_krnl_1.s_axis_tcp_open_status
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_tcp_notification => hls_bil_krnl_1.s_axis_tcp_notification
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_tcp_rx_meta => hls_bil_krnl_1.s_axis_tcp_rx_meta
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_tcp_rx_data => hls_bil_krnl_1.s_axis_tcp_rx_data
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_tcp_tx_status => hls_bil_krnl_1.s_axis_tcp_tx_status
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_udp_tx => network_krnl_1.s_axis_udp_tx
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_udp_tx_meta => network_krnl_1.s_axis_udp_tx_meta
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_tcp_listen_port => network_krnl_1.s_axis_tcp_listen_port
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_tcp_open_connection => network_krnl_1.s_axis_tcp_open_connection
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_tcp_close_connection => network_krnl_1.s_axis_tcp_close_connection
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_tcp_read_pkg => network_krnl_1.s_axis_tcp_read_pkg
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_tcp_tx_meta => network_krnl_1.s_axis_tcp_tx_meta
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_tcp_tx_data => network_krnl_1.s_axis_tcp_tx_data
+INFO: [CFGEN 83-0]   cmac_krnl_1.axis_net_rx => network_krnl_1.axis_net_rx
+INFO: [CFGEN 83-0]   network_krnl_1.axis_net_tx => cmac_krnl_1.axis_net_tx
+INFO: [CFGEN 83-2228] Creating mapping for argument network_krnl_1.axi00_ptr0 to HBM[30] for directive network_krnl_1.m00_axi:HBM[30]
+INFO: [CFGEN 83-2228] Creating mapping for argument network_krnl_1.axi01_ptr0 to HBM[31] for directive network_krnl_1.m01_axi:HBM[31]
+INFO: [SYSTEM_LINK 82-37] [16:27:58] cfgen finished successfully
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 295.461 ; gain = 0.000 ; free physical = 64667 ; free virtual = 410633
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [16:27:58] cf2bd started: /opt/Xilinx/Vitis/2019.2/bin/cf2bd  --linux --trace_buffer 1024 --input_file /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link/_sysl/.xsd --temp_dir /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link --output_dir /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int --target_bd pfm_dynamic.bd
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -bd pfm_dynamic.bd -dn dr -dp /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [16:28:02] cf2bd finished successfully
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 295.461 ; gain = 0.000 ; free physical = 65698 ; free virtual = 411666
+INFO: [v++ 60-1441] [16:28:02] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:32 . Memory (MB): peak = 679.324 ; gain = 0.000 ; free physical = 65717 ; free virtual = 411686
+INFO: [v++ 60-1443] [16:28:02] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/sdsl.dat -rtd /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/cf2sw.rtd -xclbin /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/xclbin_orig.xml -o /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/run_link
+INFO: [v++ 60-1441] [16:28:06] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 679.324 ; gain = 0.000 ; free physical = 65556 ; free virtual = 411526
+INFO: [v++ 60-1443] [16:28:06] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram --rtdJsonFileName /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/cf2sw.rtd --diagramJsonFileName /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/systemDiagramModel.json --platformFilePath /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm --generatedByName v++ --generatedByVersion 2019.2 --generatedByChangeList 2708876 --generatedByTimeStamp Wed Nov  6 21:39:14 MST 2019 --generatedByOptions /opt/Xilinx/Vitis/2019.2/bin/unwrapped/lnx64.o/v++ -t hw --platform /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm --save-temps --kernel_frequency 250 --advanced.param compiler.userPostSysLinkTcl=/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/scripts/post_sys_link.tcl --dk chipscope:network_krnl_1:s_axis_tcp_open_connection --dk chipscope:network_krnl_1:m_axis_tcp_open_status --dk chipscope:network_krnl_1:s_axis_tcp_tx_data --dk chipscope:network_krnl_1:s_axis_tcp_tx_meta --dk chipscope:network_krnl_1:s_axis_tcp_listen_port --dk chipscope:network_krnl_1:m_axis_tcp_port_status --dk chipscope:network_krnl_1:m_axis_tcp_rx_data --dk chipscope:network_krnl_1:m_axis_tcp_notification --dk chipscope:network_krnl_1:s_axis_tcp_read_pkg --dk chipscope:network_krnl_1:m_axis_tcp_rx_meta --dk chipscope:network_krnl_1:m_axis_tcp_tx_status --config ./kernel/user_krnl/hls_bil_krnl/config_sp_hls_bil_krnl.txt --temp_dir ./build_dir.hw.xilinx_u280_xdma_201920_3 -l -obuild_dir.hw.xilinx_u280_xdma_201920_3/network.xclbin _x.hw.xilinx_u280_xdma_201920_3/network_krnl.xo _x.hw.xilinx_u280_xdma_201920_3/hls_bil_krnl.xo _x.hw.xilinx_u280_xdma_201920_3/cmac_krnl.xo  --generatedByXclbinName network --kernelInfoDataFileName /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/kernel_info.dat
+INFO: [v++ 60-1454] Run Directory: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/run_link
+INFO: [v++ 60-839] Read in kernel information from file '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/kernel_info.dat'.
+WARNING: [v++ 82-214] Could not generate kernel estimated resources because /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/xo/cmac_krnl/cmac_krnl/cmac_krnl.design.xml does not exist.
+WARNING: [v++ 82-157] Unable to populate kernel available resources BRAM entry.
+WARNING: [v++ 82-158] Unable to populate kernel available resources DSP entry.
+WARNING: [v++ 82-214] Could not generate kernel estimated resources because /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/xo/network_krnl/network_krnl/network_krnl.design.xml does not exist.
+INFO: [v++ 60-1441] [16:28:09] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 679.324 ; gain = 0.000 ; free physical = 65574 ; free virtual = 411539
+INFO: [v++ 60-1443] [16:28:09] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw -f /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm --dk chipscope:network_krnl_1:s_axis_tcp_open_connection --dk chipscope:network_krnl_1:m_axis_tcp_open_status --dk chipscope:network_krnl_1:s_axis_tcp_tx_data --dk chipscope:network_krnl_1:s_axis_tcp_tx_meta --dk chipscope:network_krnl_1:s_axis_tcp_listen_port --dk chipscope:network_krnl_1:m_axis_tcp_port_status --dk chipscope:network_krnl_1:m_axis_tcp_rx_data --dk chipscope:network_krnl_1:m_axis_tcp_notification --dk chipscope:network_krnl_1:s_axis_tcp_read_pkg --dk chipscope:network_krnl_1:m_axis_tcp_rx_meta --dk chipscope:network_krnl_1:m_axis_tcp_tx_status --kernel_frequency 250 -s --output_dir /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int --log_dir /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/logs/link --report_dir /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/reports/link --config /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/vplConfig.ini -k /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link --no-info --tlog_dir /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/.tlog/v++_link_network --iprepo /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/xo/ip_repo/ethz_ch_kernel_cmac_krnl_1_0 --iprepo /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/xo/ip_repo/xilinx_com_hls_hls_bil_krnl_1_0 --iprepo /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/xo/ip_repo/ethz_ch_kernel_network_krnl_1_0 --messageDb /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/run_link/vpl.pb /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/run_link
+
+****** vpl v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/int/kernel_info.dat'.
+INFO: [VPL 60-423]   Target device: xilinx_u280_xdma_201920_3
+INFO: [VPL 60-1032] Extracting hardware platform to /mnt/scratch/yuzhuyu/Vitis_with_100Gbps_TCP-IP/hls_bil_64_3/build_dir.hw.xilinx_u280_xdma_201920_3/link/vivado/vpl/.local/hw_platform
+[16:29:32] Run vpl: Step create_project: Started
+Creating Vivado project.
+[16:29:36] Run vpl: Step create_project: Completed
+[16:29:36] Run vpl: Step create_bd: Started
+[16:31:28] Run vpl: Step create_bd: RUNNING...
+[16:33:04] Run vpl: Step create_bd: RUNNING...
+[16:33:47] Run vpl: Step create_bd: Completed
+[16:33:47] Run vpl: Step update_bd: Started
+[16:35:38] Run vpl: Step update_bd: RUNNING...
+[16:37:30] Run vpl: Step update_bd: RUNNING...
+[16:39:02] Run vpl: Step update_bd: Completed
+[16:39:02] Run vpl: Step generate_target: Started
+[16:40:45] Run vpl: Step generate_target: RUNNING...
+[16:42:36] Run vpl: Step generate_target: RUNNING...
+[16:43:18] Run vpl: Step generate_target: Completed
+[16:43:18] Run vpl: Step config_hw_runs: Started
+[16:44:00] Run vpl: Step config_hw_runs: Completed
+[16:44:00] Run vpl: Step synth: Started
